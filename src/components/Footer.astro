@@ -17,9 +17,10 @@ const { noMarginTop = false } = Astro.props;
     <Socials centered />
     <div class="copyright-wrapper">
       <span>
-        <p xmlns:cc="http://creativecommons.org/ns#">
-          ©
-          <span property="cc:attributionName">Luca Bello</span>,
+        <p>
+          <span property="cc:attributionName"
+            >&#169; Luca Bello, {currentYear}.</span
+          >
           <a
             href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1"
             target="_blank"
@@ -28,9 +29,9 @@ const { noMarginTop = false } = Astro.props;
           </a>
         </p>
       </span>
-      <!-- <span>Copyright &#169; {currentYear}</span> -->
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+      <!-- <span>&#169; {currentYear}</span> -->
+      <!-- <span class="separator">&nbsp;|&nbsp;</span> -->
+      <!-- <span>All rights reserved.</span> -->
     </div>
   </div>
 </footer>
