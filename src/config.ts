@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Luca Bello",
   desc: "A personal blog where I write about things c:",
   title: "Duckling Dev",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "duck-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 8,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
