@@ -2,9 +2,10 @@
 layout: ../layouts/CvLayout.astro
 title: "Luca Bello"
 ---
+
 **~** Personal Data<br/>
 <small>
-<b>Email</b>: gmail@gmail.com<br/>
+<b>Email</b>: (add this later!)<br/>
 <b>Location</b>: Germany 🇩🇪<br/>
 <b>GitHub</b>: [github.com/lucabello](https://github.com/lucabello)</a><br/>
 <b>Languages</b>: 🇮🇹 Italian (native), 🇬🇧 English (C2), 🇫🇷 French (A2), 🇩🇪 German (A1), 🇧🇷 Brazilian Portuguese (A1)<br/>
@@ -17,15 +18,15 @@ title: "Luca Bello"
 <big>**~** Software Engineer @ **Canonical**</big>
 <br/><small>--- 📅 Sep 2022 - now 📍 (remote), Germany 🇩🇪 ---</small>
 
-* Part of the [Observability team at Canonical](https://charmhub.io/topics/canonical-observability-stack), developing a resilient and scalable cloud-native monitoring stack, leveraging best-in-class open-source software, allowing for a seamless end-user experience and smooth admin operations.
-* Designed and implemented major improvements on the CI workflows, greatly improving the quality of our software and engineering processes.
+- Part of the [Observability team at Canonical](https://charmhub.io/topics/canonical-observability-stack), developing a resilient and scalable cloud-native monitoring stack, leveraging best-in-class open-source software, allowing for a seamless end-user experience and smooth admin operations.
+- Designed and implemented major improvements on the CI workflows, greatly improving the quality of our software and engineering processes.
 
 <big>**~** Junior Fellow @ **CERN**</big>
 <br/><small>--- 📅 Sep 2020 - Aug 2022 📍 Genève, Switzerland 🇨🇭 ---</small>
 
-* Part of the [CERN IT Monitoring team](https://monit.web.cern.ch/), operating both internally over CERN's data center operations and externally over the WLCG (Worldwide LHC Computing Grid), with Agile and DevOps methodologies.
-* Designed, developed and maintained a large-scale high-availability infrastructure to take care of the entire monitoring data pipeline, including data ingestion, cleaning, aggregation, visualization and alerting.
-* Contributed to open-source projects while investigating and researching new technologies to further improve the current infrastructure.
+- Part of the [CERN IT Monitoring team](https://monit.web.cern.ch/), operating both internally over CERN's data center operations and externally over the WLCG (Worldwide LHC Computing Grid), with Agile and DevOps methodologies.
+- Designed, developed and maintained a large-scale high-availability infrastructure to take care of the entire monitoring data pipeline, including data ingestion, cleaning, aggregation, visualization and alerting.
+- Contributed to open-source projects while investigating and researching new technologies to further improve the current infrastructure.
 
 ---
 
@@ -47,7 +48,6 @@ Attended the excellence program "Young Talents", which collects the top tier tal
 
 <big>**~** Compressed computations using Wavelets for Hidden Markov Models with continuous observations @ [<b>PLOS One 🔗</b>](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0286074)</big><br/>
 <br/><small>--- 📅 June 6, 2023 👤 Bello L, Wiedenhöft J, Schliep A ---</small><br/>
-
 
 ---
 

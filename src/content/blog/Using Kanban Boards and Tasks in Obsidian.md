@@ -10,6 +10,7 @@ tags:
   - tasks
 creationDatetime: 2023-08-07
 ---
+
 Whenever I start a personal project (and believe, that happens **a lot**) I find it extremely useful to break it down into tasks; additionally, as any software person will know, Kanban Boards are great tools to track the status of tasks.
 
 Let's have a look at how you can use the two individually and, most importantly, together! ✅
@@ -28,18 +29,18 @@ For my personal projects **I follow the common `Open > In Progress > Done` patte
 
 Interestingly though, the Kanban Board is just a fancy view; **the note itself holds all of your cards as tasks**. Access the command palette (`Ctrl+P`) and `Toggle between Kanban and Markdown mode` to see for yourself. 👀
 
-*But if the Kanban Board cards are tasks, could they be queried by the Tasks plugin?*
+_But if the Kanban Board cards are tasks, could they be queried by the Tasks plugin?_
 Well, yes! 🥳
 
 ## 🍻 Combining the two
 
-If you're using Kanban on its own to track your tasks, you're giving up on having a list view of your tasks. But with the Tasks plugin, **you can query those tasks just as you would with any other.** 
+If you're using Kanban on its own to track your tasks, you're giving up on having a list view of your tasks. But with the Tasks plugin, **you can query those tasks just as you would with any other.**
 
 This becomes especially useful if you (like me) like to have an 👈 **index note** for your projects. Through a Tasks query you could display the most important tasks (or the ones in progress, etc.) at the very top of that note, making sure you never lose track of your tasks' status without having to open the Kanban board every time.
 
 ## 🕛 What I'm currently using
 
-Truth to be told, I've been using the Kanban plugin less and less: that's due mainly to me enjoying a keyboard-only workflow more than having to reach out for the 🐭 mouse every time. *But how I would track a task's status then?*
+Truth to be told, I've been using the Kanban plugin less and less: that's due mainly to me enjoying a keyboard-only workflow more than having to reach out for the 🐭 mouse every time. _But how I would track a task's status then?_
 
 The Tasks plugin supports [themes and CSS snippets](https://publish.obsidian.md/tasks/Reference/Status+Collections/About+Status+Collections) that **extend the possible status of a task beyond the simple checked/unchecked status.** Not only you can graphically change how the tasks look, as in `❓ This is a question task`, but you can even **change the logic** behind it.
 

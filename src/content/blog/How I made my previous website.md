@@ -11,39 +11,42 @@ tags:
   - blog
 creationDatetime: 2023-08-05
 ---
+
 Before moving to Astro (which powers this blog) I was using [Quartz](https://quartz.jzhao.xyz/) **v3** to directly publish notes from my Obsidian vault. The project has since moved on to **v4**, with major changes to its architecture.
 
-If you want to use **Quartz v4**, I'd encourage you check out [this video](https://www.youtube.com/watch?v=6s6DT1yN4dw&t=227s) from *Nicole van der Hoeven* on how to set it up! 😊
+If you want to use **Quartz v4**, I'd encourage you check out [this video](https://www.youtube.com/watch?v=6s6DT1yN4dw&t=227s) from _Nicole van der Hoeven_ on how to set it up! 😊
 
 ---
 
 I love to take notes on things. When I found out about [Obsidian](https://obsdian.md) I knew it was going to change my entire Personal Knowledge Management (PKM) system.
 
-While there are countless articles on how to **publish a blog** (or *digital garden*) **for free with Obsidian**, none of them met my specific requirements. This post aims at summarizing the steps I took for that blog to come online, so that you can easily replicate the process! 💪🏻
+While there are countless articles on how to **publish a blog** (or _digital garden_) **for free with Obsidian**, none of them met my specific requirements. This post aims at summarizing the steps I took for that blog to come online, so that you can easily replicate the process! 💪🏻
 
 ## 📝 My requirements
 
 Let's go through what I wanted to achieve from this setup:
-* **Seamlessly publish from my main Obsidian vault**
-  Many solutions require you to either modify your vault's configuration or create a separate one; I write everything in my main vault, and *I really wanted the publishing solution to be transparent to my daily Obsidian use*.
-* **Use GitHub Pages as a backend and frontend**
-  Netlify or Vercel are very common choices; however, adding an extra tool means adding complexity; I wanted this solution to be *as simple as possible*.
-* **Use a declarative approach to choose which notes to share**
-  Having the published notes in my main vault means I can form meaningful connection with my private notes; however, *I don't want to run the risk of accidentally uploading my private notes to GitHub*. I should be able to pick which notes to publish *through their YAML front matter*.
-* **Easily extend and customize the site**
-  Even though I currently simply post stuff I like to write about, *I want to be able to add more complex components in the future (e.g., comments on my posts)*. I also like to switch up the color scheme from time to time. 🤷🏻
+
+- **Seamlessly publish from my main Obsidian vault**
+  Many solutions require you to either modify your vault's configuration or create a separate one; I write everything in my main vault, and _I really wanted the publishing solution to be transparent to my daily Obsidian use_.
+- **Use GitHub Pages as a backend and frontend**
+  Netlify or Vercel are very common choices; however, adding an extra tool means adding complexity; I wanted this solution to be _as simple as possible_.
+- **Use a declarative approach to choose which notes to share**
+  Having the published notes in my main vault means I can form meaningful connection with my private notes; however, _I don't want to run the risk of accidentally uploading my private notes to GitHub_. I should be able to pick which notes to publish _through their YAML front matter_.
+- **Easily extend and customize the site**
+  Even though I currently simply post stuff I like to write about, _I want to be able to add more complex components in the future (e.g., comments on my posts)_. I also like to switch up the color scheme from time to time. 🤷🏻
 
 ## 🎉 The solution
 
 To achieve my desired setup, I ended up using:
-* 🪴 [Quartz](https://quartz.jzhao.xyz/);
-* 🗞️ the [GitHub Publisher plugin](https://github.com/ObsidianPublisher/obsidian-github-publisher).
 
-**Quartz** does the heavy lifting by converting Obsidian notes to a beautiful static site, and its [setup](https://quartz.jzhao.xyz/notes/setup/) is pretty straightforward. *However*, the project recommends using the entire `content/` folder as a vault; this makes things easier for a novice user, but it clashes with my requirements. 💢
+- 🪴 [Quartz](https://quartz.jzhao.xyz/);
+- 🗞️ the [GitHub Publisher plugin](https://github.com/ObsidianPublisher/obsidian-github-publisher).
 
-The **GitHub Publisher community plugin** can be installed and configured directly from Obsidian. It allows me to obtain the *declarative approach* I mentioned before, by only publishing the notes that have `share: true` in their YAML front matter. This tool also comes with good [documentation](https://obsidian-publisher.netlify.app/plugin/) and it's easy to setup.
-  
-Sounds like everything's good to go, *right*?
+**Quartz** does the heavy lifting by converting Obsidian notes to a beautiful static site, and its [setup](https://quartz.jzhao.xyz/notes/setup/) is pretty straightforward. _However_, the project recommends using the entire `content/` folder as a vault; this makes things easier for a novice user, but it clashes with my requirements. 💢
+
+The **GitHub Publisher community plugin** can be installed and configured directly from Obsidian. It allows me to obtain the _declarative approach_ I mentioned before, by only publishing the notes that have `share: true` in their YAML front matter. This tool also comes with good [documentation](https://obsidian-publisher.netlify.app/plugin/) and it's easy to setup.
+
+Sounds like everything's good to go, _right_?
 **Wrong.**
 
 ## 👣 Step-by-step and workarounds
@@ -52,7 +55,7 @@ There's still a couple things to tweak for this setup to work correctly. Rather 
 
 ### 🪴 Setup Quartz
 
-Create a new repository by [using jackyzha0/quartz as a template](https://github.com/new?template_name=quartz&template_owner=jackyzha0). Remember to *Include all branches*: you'll add your notes in the `hugo` branch, while the generated site will be automatically published to the `master` branch. Now you can configure the site's title, icon, and more by following [the relevant docs](https://quartz.jzhao.xyz/notes/config).
+Create a new repository by [using jackyzha0/quartz as a template](https://github.com/new?template_name=quartz&template_owner=jackyzha0). Remember to _Include all branches_: you'll add your notes in the `hugo` branch, while the generated site will be automatically published to the `master` branch. Now you can configure the site's title, icon, and more by following [the relevant docs](https://quartz.jzhao.xyz/notes/config).
 
 The site's homepage is the `content/_index.md` file, while your notes should go in the `content/notes/` folder. Feel free to remove everything in that folder (except for the `content/notes/images` directory).
 
@@ -76,7 +79,7 @@ Install the community plugin from Obsidian and open its configuration.
 
 Enter the name of your repository, your GitHub username, and a GitHub token (generate one [here](https://github.com/settings/tokens/new?scopes=repo,workflow)). Input `hugo` as the main branch, and enable the automatic merge of pull requests.
 
-Navigate to the *Upload Configuration* tab, and **configure both the “Default Folder” and “Root Folder” as `content/notes`.**  Now open the *Embed* tab, **enable “Transfer Attachments” and set the “Default attachment folder” to `content/notes/images`**.
+Navigate to the _Upload Configuration_ tab, and **configure both the “Default Folder” and “Root Folder” as `content/notes`.** Now open the _Embed_ tab, **enable “Transfer Attachments” and set the “Default attachment folder” to `content/notes/images`**.
 
 Explore the other settings to customize the plugin to your liking (I recommend enabling “Markdown hard line break” and “Inline Tags”).
 
