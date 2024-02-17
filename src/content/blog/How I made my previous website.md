@@ -1,8 +1,7 @@
 ---
 title: How I made my previous website
 description: My step-by-step guide on how to publish your Obsidian vault through Quartz v3.
-pubDatetime: 2023-08-05
-modDatetime: 2024-02-17
+pubDatetime: 2023-08-05T14:00:00Z
 featured: false
 draft: false
 tags:
@@ -12,7 +11,7 @@ tags:
 creationDatetime: 2023-08-05
 ---
 
-Before moving to Astro (which powers this blog) I was using [Quartz](https://quartz.jzhao.xyz/) **v3** to directly publish notes from my Obsidian vault. The project has since moved on to **v4**, with major changes to its architecture.
+Before moving to [Astro](https://astro.build/) (which powers this blog) I was using [Quartz](https://quartz.jzhao.xyz/) **v3** to directly publish notes from my Obsidian vault. The project has since moved on to **v4**, with major changes to its architecture.
 
 If you want to use **Quartz v4**, I'd encourage you check out [this video](https://www.youtube.com/watch?v=6s6DT1yN4dw&t=227s) from _Nicole van der Hoeven_ on how to set it up! 😊
 

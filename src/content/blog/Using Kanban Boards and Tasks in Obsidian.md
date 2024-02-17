@@ -1,8 +1,8 @@
 ---
 title: Using Kanban Boards and Tasks in Obsidian
 description: "I tried to use both these plugins and combine their features: this is what I've learned from it."
-pubDatetime: 2023-08-07
-featured: true
+pubDatetime: 2023-08-07T14:00:00Z
+featured: false
 draft: false
 tags:
   - obsidian
