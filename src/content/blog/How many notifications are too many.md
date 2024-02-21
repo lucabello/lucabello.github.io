@@ -1,7 +1,7 @@
 ---
 title: How many notifications are too many?
 description: Humans aren't made to handle the amount of notifications we receive nowadays. What's the real issue and how can you prevent it?
-pubDatetime: 2024-02-21T15:00:00Z
+pubDatetime: 2024-02-21T09:35:00Z
 featured: true
 draft: false
 tags:
