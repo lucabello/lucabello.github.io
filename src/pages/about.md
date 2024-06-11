@@ -30,5 +30,5 @@ Take a look at [my CV](/cv)!
 ## Talks and Presentations 🎙️
 
 - [**KubeCon NA 2023**](https://www.youtube.com/watch?v=PCugXFD82Mg&list=PLwFSk464RMxmdkj92EtrMXhG0caGtQxc8&index=9): React before your users do: adding Observability
-- **KubeCon EU 2024**: Observability: Showcasing COS Lite and what you can do with it
+- [**KubeCon EU 2024**](https://www.youtube.com/watch?v=q1mfsq0DxiM&list=PLwFSk464RMxnZKy7SIP2X49Zzocnl8Dze&index=9): Observability: Showcasing COS Lite and what you can do with it
 - **Grafana&Friends Munich 2024**: COS: a Charming solution to Observability
