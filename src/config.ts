@@ -3,12 +3,20 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://lucabello.github.io", // replace this with your deployed domain
   author: "Luca Bello",
+  profile: "https://lucabello.github.io",
   desc: "A personal blog where I write about things c:",
   title: "Duckling Dev",
   ogImage: "duck-og.jpg",
   lightAndDarkMode: true,
+  postPerIndex: 4,
   postPerPage: 8,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  showArchives: true,
+  editPost: {
+    url: "https://github.com/lucabello/lucabello.github.io/edit/main/src/content/blog",
+    text: "Suggest Changes",
+    appendFilePath: true,
+  },
 };
 
 export const LOCALE = {
