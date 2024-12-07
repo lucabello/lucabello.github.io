@@ -5,32 +5,36 @@
 @layer base {
   :root,
   html[data-theme="light"] {
+    /* Default theme */
     /* --color-fill: 251, 254, 251; */
     /* --color-text-base: 40, 39, 40; */
     /* --color-accent: 0, 108, 172; */
     /* --color-card: 230, 230, 230; */
     /* --color-card-muted: 205, 205, 205; */
     /* --color-border: 236, 233, 233; */
-    --color-fill: 242, 245, 236;
-    --color-text-base: 53, 53, 56;
-    --color-accent: 17, 88, 209;
-    --color-card: 206, 213, 180;
-    --color-card-muted: 187, 199, 137;
-    --color-border: 124, 173, 255;
+    /* Default theme */
+    --color-fill: 253, 246, 227;
+    --color-text-base: 92, 106, 114;
+    --color-accent: 141, 161, 1;
+    --color-card: 244, 240, 217;
+    --color-card-muted: 239, 235, 212;
+    --color-border: 147, 159, 145;
   }
   html[data-theme="dark"] {
+    /* Default theme */
     /* --color-fill: 33, 39, 55; */
     /* --color-text-base: 234, 237, 243; */
     /* --color-accent: 255, 107, 1; */
     /* --color-card: 52, 63, 96; */
     /* --color-card-muted: 138, 51, 2; */
     /* --color-border: 171, 75, 8; */
-    --color-fill: 47, 55, 65;
-    --color-text-base: 230, 230, 230;
-    --color-accent: 26, 217, 217;
-    --color-card: 63, 75, 90;
-    --color-card-muted: 89, 107, 129;
-    --color-border: 59, 70, 85;
+    /* Default theme */
+    --color-fill: 39, 46, 51;
+    --color-text-base: 211, 198, 170;
+    --color-accent: 167, 192, 128;
+    --color-card: 46, 56, 60;
+    --color-card-muted: 55, 65, 69;
+    --color-border: 133, 146, 137;
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
@@ -41,45 +45,23 @@
     display: block;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base
-    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base selection:bg-skin-accent/70 selection:text-skin-inverted;
   }
   section,
   footer {
     @apply mx-auto max-w-3xl px-4;
   }
   a {
-    @apply outline-2 outline-offset-1 outline-skin-fill 
-    focus-visible:no-underline focus-visible:outline-dashed;
+    @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
   svg {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
   }
   svg.icon-tabler {
-    @apply inline-block h-6 w-6 scale-125 fill-transparent 
-    stroke-current stroke-2 opacity-90 group-hover:fill-transparent 
-    sm:scale-110;
+    @apply inline-block h-6 w-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110;
   }
   .prose {
-    @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-h3:italic prose-p:!text-skin-base 
-    prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
-    hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
-    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
-    prose-figcaption:!text-skin-base prose-figcaption:opacity-70
-    prose-strong:!text-skin-base
-
-    
-    prose-code:rounded prose-code:bg-skin-card 
-    prose-code:bg-opacity-75 prose-code:p-1 
-    prose-code:before:!content-none prose-code:after:!content-none
-    prose-ol:!text-skin-base 
-    prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent
-    prose-table:text-skin-base prose-th:border
-    prose-th:border-skin-line prose-td:border 
-    prose-td:border-skin-line prose-img:!my-2 
-    prose-img:mx-auto prose-img:border-2 
-    prose-img:border-skin-line prose-hr:!border-skin-line;
+    @apply prose-headings:!mb-3 prose-headings:!text-skin-base prose-h3:italic prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-skin-base prose-figcaption:opacity-70 prose-strong:!text-skin-base prose-code:rounded prose-code:bg-skin-card/75 prose-code:p-1 prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-skin-base prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent prose-table:text-skin-base prose-th:border prose-th:border-skin-line prose-td:border prose-td:border-skin-line prose-img:!my-2 prose-img:mx-auto prose-img:border-2 prose-img:border-skin-line prose-hr:!border-skin-line;
   }
   .prose a {
     @apply break-words hover:!text-skin-accent;
@@ -127,6 +109,10 @@
     @apply bg-skin-card-muted;
   }
 
+  /* ===== Code Blocks & Syntax Highlighting ===== */
+  pre:has(code) {
+    @apply border border-skin-line;
+  }
   code,
   blockquote {
     word-wrap: break-word;
@@ -134,6 +120,16 @@
 
   pre > code {
     white-space: pre;
+  }
+
+  /* Apply Dark Theme (if multi-theme specified) */
+  html[data-theme="dark"] pre:has(code),
+  html[data-theme="dark"] pre:has(code) span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
   }
 }
 
