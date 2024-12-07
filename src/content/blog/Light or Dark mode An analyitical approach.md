@@ -81,6 +81,9 @@ If you have thoughts you want to share (or just want to tell me that I'm dumb fo
 ---
 
 [^1]: Piepenbrock C, Mayr S, Mund I, Buchner A. Positive display polarity is advantageous for both younger and older adults. Ergonomics. 2013;56(7):1116-24. doi: 10.1080/00140139.2013.790485. Epub 2013 May 8. PMID: 23654206. https://doi.org/10.1080/00140139.2013.790485
+
 [^2]: Piepenbrock C, Mayr S, Buchner A. Positive display polarity is particularly advantageous for small character sizes: implications for display design. Hum Factors. 2014 Aug;56(5):942-51. doi: 10.1177/0018720813515509. PMID: 25141597. https://doi.org/10.1177/0018720813515509
+
 [^3]: Dobres, Jonathan & Chahine, Nadine & Reimer, Bryan. (2017). Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading. Applied Ergonomics. 60. 68-73. 10.1016/j.apergo.2016.11.001. https://doi.org/10.1016/j.apergo.2016.11.001
+
 [^4]: Aleman, A., Wang, M. & Schaeffel, F. Reading and Myopia: Contrast Polarity Matters. *Sci Rep* **8**, 10840 (2018). https://doi.org/10.1038/s41598-018-28904-x

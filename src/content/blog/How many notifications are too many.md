@@ -53,4 +53,5 @@ There's even a number of applications that will “group up” notifications and
 ---
 
 [^overload]: Arnold M, Goldschmitt M, Rigotti T. Dealing with information overload: a comprehensive review. Front Psychol. 2023 Jun 21;14:1122200. doi: [10.3389/fpsyg.2023.1122200](https://doi.org/10.3389%2Ffpsyg.2023.1122200). PMID: 37416535; PMCID: PMC10322198.
+
 [^icu]: Rozenes, S., Fux, A., Kagan, I. *et al.* Alert-Grouping: Smart Personalization of Monitoring System Thresholds to Help Healthcare Teams Struggle with Alarm Fatigue in Intensive Care. *J Med Syst* **47**, 113 (2023). https://doi.org/10.1007/s10916-023-02010-6
