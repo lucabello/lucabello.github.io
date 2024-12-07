@@ -10,7 +10,6 @@ title: "Luca Bello"
 <b>GitHub</b>: [github.com/lucabello](https://github.com/lucabello)</a><br/>
 <b>Languages</b>: 🇮🇹 Italian (native), 🇬🇧 English (C2), 🇫🇷 French (A2), 🇩🇪 German (A1), 🇧🇷 Brazilian Portuguese (A1)<br/>
 <b>Main Programming Languages</b>: Python, Go, Scala, C, C++, Bash, SQL<br/>
-<b>Technologies</b>: Kubernetes, Puppet, CI/CD, Prometheus, Grafana, Loki, Mimir, Kafka, Juju
 </small>
 
 ## Experience 💻
@@ -19,7 +18,10 @@ title: "Luca Bello"
 <br/><small>--- 📅 Sep 2022 - now 📍 (remote), Germany 🇩🇪 ---</small>
 
 - Part of the [Observability team at Canonical](https://charmhub.io/topics/canonical-observability-stack), developing a resilient and scalable cloud-native monitoring stack, leveraging best-in-class open-source software, allowing for a seamless end-user experience and smooth admin operations.
-- Designed and implemented major improvements on the CI workflows, greatly improving the quality of our software and engineering processes.
+- Designed and implemented our [CI/CD infrastructure](https://github.com/canonical/observability), automating **lots** of tasks and greatly improving the quality of our software and engineering process.
+
+<small><b>Programming Languages</b>: Python, Go, Bash</small><br/>
+<small><b>Technologies</b>: Prometheus, Grafana, Loki, Mimir, Alertmanager, Traefik, OpenTelemetry Collector, Juju, Terraform, Kubernetes</small>
 
 <big>**~** Junior Fellow @ **CERN**</big>
 <br/><small>--- 📅 Sep 2020 - Aug 2022 📍 Genève, Switzerland 🇨🇭 ---</small>
@@ -27,6 +29,9 @@ title: "Luca Bello"
 - Part of the [CERN IT Monitoring team](https://monit.web.cern.ch/), operating both internally over CERN's data center operations and externally over the WLCG (Worldwide LHC Computing Grid), with Agile and DevOps methodologies.
 - Designed, developed and maintained a large-scale high-availability infrastructure to take care of the entire monitoring data pipeline, including data ingestion, cleaning, aggregation, visualization and alerting.
 - Contributed to open-source projects while investigating and researching new technologies to further improve the current infrastructure.
+
+<small><b>Programming Languages</b>: Scala, Python, SQL, Bash</small><br/>
+<small><b>Technologies</b>: Prometheus, Grafana, Loki, Cortex, Alertmanager, Kafka, Flume, Puppet, Kubernetes</small>
 
 ---
 
