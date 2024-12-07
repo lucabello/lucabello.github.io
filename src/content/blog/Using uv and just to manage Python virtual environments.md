@@ -93,7 +93,7 @@ Let's go over the different sections of the script.
 If I run it, it displays the following (with colored output):
 
 ```
-∮ venv
+∮ uv-venv
 Virtual Environment manager - in Just!
 
 Available recipes:
