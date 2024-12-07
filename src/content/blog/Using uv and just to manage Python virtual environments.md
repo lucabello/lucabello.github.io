@@ -1,7 +1,7 @@
 ---
 title: Using `uv` and `just` to manage Python virtual environments
 description: How to make an extremely lightweight venv manager.
-pubDatetime: 2024-12-07T15:00:00Z
+pubDatetime: 2024-12-07T14:00:00Z
 modDatetime:
 featured: true
 draft: false
@@ -11,7 +11,7 @@ tags:
   - python
   - uv
   - just
-creationDatetime: 2024-12-07 14:29
+creationDatetime: 2024-12-07 10:29
 ---
 
 Over time, I tried lots of tools to manage my Python virtual environments, but I didn't end up liking any of them:
