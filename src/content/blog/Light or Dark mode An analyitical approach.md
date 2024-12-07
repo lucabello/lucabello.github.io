@@ -3,7 +3,7 @@ title: Light or Dark mode? An analytical approach
 description: Does it come down to personal preference, or is there a "correct" choice?
 pubDatetime: 2024-03-12T09:00:00Z
 modDatetime:
-featured: true
+featured: false
 draft: false
 tags:
   - analysis
