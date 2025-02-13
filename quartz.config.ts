@@ -14,6 +14,8 @@ const config: QuartzConfig = {
     enablePopovers: false,
     analytics: {
       provider: "umami",
+      host: "https://eu.umami.is",
+      websiteId: "0b4ba915-fa05-416d-8cdd-21cdb0060974",
     },
     locale: "en-US",
     baseUrl: "lucabello.github.io",
@@ -26,7 +28,7 @@ const config: QuartzConfig = {
       typography: {
         header: "Comfortaa",
         body: "Comfortaa",
-        code: "IBM Plex Mono",
+        code: "Azeret Mono",
       },
       colors: {
         lightMode: {
