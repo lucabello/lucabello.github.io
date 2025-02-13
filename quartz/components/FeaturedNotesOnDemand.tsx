@@ -41,7 +41,7 @@ export default ((userOpts?: Partial<Options>) => {
     const showRecentNotes = (fileData.frontmatter!["show-recent-notes"] === true)
     return (
       <div class={classNames(displayClass, "recent-notes")}>
-        <h2>{opts.title ?? i18n(cfg.locale).components.featuredNotes.title}</h2>
+        <h2>{opts.title ?? i18n(cfg.locale).components.featuredNotes.title} ✨</h2>
         <ul class="recent-ul">
           {pages.slice(0, opts.limit).map((page) => {
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
