@@ -26,8 +26,8 @@ export const defaultContentPageLayout: PageLayout = {
   left: [],
   right: [],
   afterBody: [
-    Component.FeaturedNotesOnDemand(),
-    Component.RecentNotesOnDemand()
+    Component.FeaturedNotesOnDemand({showTags: false}),
+    Component.RecentNotesOnDemand({showTags: false})
   ]
 }
 

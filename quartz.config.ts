@@ -30,25 +30,25 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#eff1f5", // page background
-          lightgray: "#dce0e8", // borders
-          gray: "#9ca0b0", // graph links, heavier borders
-          darkgray: "#4c4f69", // body tet
-          dark: "#8839ef", // header text and icons
-          secondary: "#1e66f5", // link colour, current graph node
-          tertiary: "#179299", // hover states and visited graph nodes
-          highlight: "rgba(30, 102, 245, 0.07)", // internal link background, highlighted text/lines of code
+          light: "#fdf6e3 ", // page background
+          lightgray: "#ede1bf", // borders
+          gray: "#d7bc70", // graph links, heavier borders
+          darkgray: "#002b36", // body text
+          dark: "#cb4b16", // header text and icons
+          secondary: "#b58900", // link colour, current graph node
+          tertiary: "#6c782e", // hover states and visited graph nodes
+          highlight: "rgba(181, 137, 0, 0.07)", // internal link background, highlighted text/lines of code
           textHighlight: "#fff23688", // markdown highlighted text background
         },
         darkMode: {
-          light: "#1f2335", // page background
-          lightgray: "#3b4261", // borders
-          gray: "#565f89", // graph links, heavier borders
-          darkgray: "#c0caf5", // body tet
-          dark: "#9d7cd8", // header text and icons
-          secondary: "#7dcfff", // link colour, current graph node
-          tertiary: "#b4f9f8", // hover states and visited graph nodes
-          highlight: "rgba(125, 207, 255, 0.1)", // internal link background, highlighted text/lines of code
+          light: "#141617", // page background
+          lightgray: "#282828", // borders
+          gray: "#504945", // graph links, heavier borders
+          darkgray: "#ddc7a1", // body text
+          dark: "#e78a4e", // header text and icons
+          secondary: "#d8a657", // link colour, current graph node
+          tertiary: "#a9b665", // hover states and visited graph nodes
+          highlight: "rgba(216, 166, 87, 0.12)", // internal link background, highlighted text/lines of code
           textHighlight: "#fff23688", // markdown highlighted text background
         },
       },
@@ -62,8 +62,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "catppuccin-latte",
-          dark: "tokyo-night",
+          light: "solarized-light",
+          dark: "dark-plus",
         },
         keepBackground: false,
       }),

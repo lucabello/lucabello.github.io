@@ -8,7 +8,6 @@ draft: false
 tags:
   - obsidian
   - project-management
-  - tasks
 ---
 
 Whenever I start a personal project (and believe, that happens **a lot**) I find it extremely useful to break it down into tasks; additionally, as any software person will know, Kanban Boards are great tools to track the status of tasks.

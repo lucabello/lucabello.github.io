@@ -8,8 +8,6 @@ draft: false
 tags:
   - how-to
   - development
-  - python
-  - uv
 ---
 
 Whenever I write utility Python scripts, I'm always hurt by the constraint of not using external dependencies, because I want them to run in _any_ environment. But if I want to use [`typer`](https://github.com/fastapi/typer) for a nice CLI experience, or [`requests`](https://requests.readthedocs.io/en/latest/) to avoid going mad over an HTTP requets, or [`sh`](https://github.com/amoffat/sh) for easy interactions with the underlying shell?

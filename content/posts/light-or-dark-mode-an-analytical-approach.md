@@ -7,7 +7,6 @@ featured: false
 draft: false
 tags:
   - analysis
-  - accessibility
 ---
 
 I often find myself caught up in the **light mode vs. dark mode** debate. _“Oh Luca, how can you use light mode?”_ 🙈

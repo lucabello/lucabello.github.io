@@ -9,9 +9,6 @@ draft: false
 tags:
   - how-to
   - development
-  - python
-  - uv
-  - just
 ---
 
 Over time, I tried lots of tools to manage my Python virtual environments, but I didn't end up liking any of them:
