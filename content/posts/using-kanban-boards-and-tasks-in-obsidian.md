@@ -2,13 +2,13 @@
 title: Using Kanban Boards and Tasks in Obsidian
 description: "I tried to use both these plugins and combine their features: this is what I've learned from it."
 date: 2023-08-07
+creationDate: 2023-08-07
 featured: false
 draft: false
 tags:
   - obsidian
   - project-management
   - tasks
-creationDate: 2023-08-07
 ---
 
 Whenever I start a personal project (and believe, that happens **a lot**) I find it extremely useful to break it down into tasks; additionally, as any software person will know, Kanban Boards are great tools to track the status of tasks.

@@ -25,6 +25,10 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [],
   right: [],
+  afterBody: [
+    Component.FeaturedNotesOnDemand(),
+    Component.RecentNotesOnDemand()
+  ]
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

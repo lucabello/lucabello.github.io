@@ -103,7 +103,8 @@ header {
 
 // Search
 .search {
-  min-width: fit-content;
+  // min-width: fit-content;
+  min-width: 10rem;
   max-width: 14rem;
   @media all and ($mobile) {
     flex-grow: 0.3;

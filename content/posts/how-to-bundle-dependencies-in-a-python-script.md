@@ -2,6 +2,7 @@
 title: How to bundle dependencies in a Python script
 description: Using `uv` to run scripts with external dependencies.
 date: 2024-12-07
+creationDate: 2024-12-07
 featured: true
 draft: false
 tags:
@@ -9,7 +10,6 @@ tags:
   - development
   - python
   - uv
-creationDate: 2024-12-07
 ---
 
 Whenever I write utility Python scripts, I'm always hurt by the constraint of not using external dependencies, because I want them to run in _any_ environment. But if I want to use [`typer`](https://github.com/fastapi/typer) for a nice CLI experience, or [`requests`](https://requests.readthedocs.io/en/latest/) to avoid going mad over an HTTP requets, or [`sh`](https://github.com/amoffat/sh) for easy interactions with the underlying shell?

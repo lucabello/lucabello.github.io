@@ -2,13 +2,13 @@
 title: How I made my previous website
 description: My step-by-step guide on how to publish your Obsidian vault through Quartz v3.
 date: 2023-08-05
+creationDate: 2023-08-05
 featured: false
 draft: false
 tags:
   - obsidian
   - tutorial
   - blog
-creationDate: 2023-08-05
 ---
 
 Before moving to [Astro](https://astro.build/) (which powers this blog) I was using [Quartz](https://quartz.jzhao.xyz/) **v3** to directly publish notes from my Obsidian vault. The project has since moved on to **v4**, with major changes to its architecture.

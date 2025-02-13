@@ -16,6 +16,8 @@ const TableOfContentsCollapsed: QuartzComponent = ({
   if (!fileData.toc) {
     return null
   }
+  if (fileData.slug?.startsWith("pages/") || fileData.slug?.endsWith("index"))
+    return
   const collapseToc = true
 
   return (

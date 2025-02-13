@@ -2,12 +2,12 @@
 title: Light or Dark mode? An analytical approach
 description: Does it come down to personal preference, or is there a "correct" choice?
 date: 2024-03-12
+creationDate: 2024-03-06
 featured: false
 draft: false
 tags:
   - analysis
   - accessibility
-creationDate: 2024-03-06
 ---
 
 I often find myself caught up in the **light mode vs. dark mode** debate. _“Oh Luca, how can you use light mode?”_ 🙈

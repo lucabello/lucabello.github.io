@@ -2,13 +2,11 @@
 title: Why did I change up my blog?
 description: Explaining why I migrated my blog from Quartz v3 to Astro.
 date: 2024-02-17
+creationDate: 2024-02-17
 featured: false
 draft: false
 tags:
-  - blog
-  - tutorial
   - obsidian
-creationDate: 2024-02-17
 ---
 
 This blog is powered by [Astro](https://astro.build/), and the excellent [satnaing/astro-paper](https://github.com/satnaing/astro-paper) theme.

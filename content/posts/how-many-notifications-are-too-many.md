@@ -2,12 +2,12 @@
 title: How many notifications are too many?
 description: Humans aren't made to handle the amount of notifications we receive nowadays. What's the real issue and how can you prevent it?
 date: 2024-02-21
+creationDate: 2024-02-20
 featured: false
 draft: false
 tags:
   - observability
   - thoughts
-creationDate: 2024-02-20
 ---
 
 One of the main points of Observability is **monitoring**: receiving an alert when something goes down allows you to react timely and keep downtimes to a minimum. However, increasing the amount of notifications and alerts doesn't equate to better awareness: in fact, there's a point where **too many** notifications start becoming counterproductive.
