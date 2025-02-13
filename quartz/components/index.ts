@@ -20,6 +20,14 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
+// Personal additions
+import LinksHeader from "./LinksHeader"
+import RecentNotesOnDemand from "./RecentNotesOnDemand"
+import FeaturedNotesOnDemand from "./FeaturedNotesOnDemand"
+import SpacerCustom from "./SpacerCustom"
+import HorizontalRule from "./HorizontalRule"
+import FooterCustom from "./FooterCustom"
+import TableOfContentsCollapsed from "./TableOfContentsCollapsed.tsx"
 
 export {
   ArticleTitle,
@@ -44,4 +52,12 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  // Personal additions
+  LinksHeader,
+  RecentNotesOnDemand,
+  FeaturedNotesOnDemand,
+  SpacerCustom,
+  HorizontalRule,
+  FooterCustom,
+  TableOfContentsCollapsed,
 }

@@ -39,8 +39,11 @@ export default {
       title: "Graph View",
     },
     recentNotes: {
-      title: "Recent Notes",
+      title: "Recent Posts",
       seeRemainingMore: ({ remaining }) => `See ${remaining} more →`,
+    },
+    featuredNotes: {
+      title: "Featured",
     },
     transcludes: {
       transcludeOf: ({ targetSlug }) => `Transclude of ${targetSlug}`,

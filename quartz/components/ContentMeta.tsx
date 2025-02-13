@@ -12,11 +12,13 @@ interface ContentMetaOptions {
    */
   showReadingTime: boolean
   showComma: boolean
+  excludeSlugs: string  // comma-separated list of slugs to exclude
 }
 
 const defaultOptions: ContentMetaOptions = {
   showReadingTime: true,
   showComma: true,
+  excludeSlugs: "index",
 }
 
 export default ((opts?: Partial<ContentMetaOptions>) => {
@@ -25,6 +27,12 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
 
   function ContentMetadata({ cfg, fileData, displayClass }: QuartzComponentProps) {
     const text = fileData.text
+
+    const excludeSlugsList = options.excludeSlugs.split(",")
+    if (excludeSlugsList.some(targetSlug => fileData.slug?.endsWith(targetSlug)))
+      return
+    if (excludeSlugsList.some(targetSlug => fileData.slug?.startsWith(targetSlug)))
+      return
 
     if (text) {
       const segments: (string | JSX.Element)[] = []
