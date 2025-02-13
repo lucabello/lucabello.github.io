@@ -31,7 +31,7 @@ import requests
 ... # your python script
 ```
 
-The `uv run ` shebang takes care of everything:
+The `uv run` shebang takes care of everything:
 
 - the `-s` flag tells `uv run` it's interacting with a script;
 - the `-q` flag suppresses `uv`'s own messages about getting your dependencies.
