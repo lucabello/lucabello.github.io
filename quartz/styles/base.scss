@@ -158,6 +158,10 @@ a {
     p > strong {
       color: var(--dark);
     }
+
+    li > strong {
+      color: var(--dark);
+    }
   }
 
   & > #quartz-body {
