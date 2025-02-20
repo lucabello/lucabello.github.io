@@ -63,11 +63,11 @@ baseUrl: "lucabello.github.io",
         priority: ["frontmatter", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
-        theme: {
+        theme: {  // themes from: https://shikiji.netlify.app/themes
           light: "solarized-light",
-          dark: "dark-plus",
+          dark: "vitesse-dark",
         },
-        keepBackground: false,
+        keepBackground: true,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
