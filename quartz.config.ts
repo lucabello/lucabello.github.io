@@ -32,26 +32,26 @@ baseUrl: "lucabello.github.io",
       },
       colors: {
         lightMode: {
-          light: "#fffffe", // page background
-          lightgray: "#d6cffa", // borders
-          gray: "#b7abf5", // graph links, heavier borders
-          darkgray: "#2b2c34", // body text
-          dark: "#6246ea", // header text and icons
-          secondary: "#586fe4", // link colour, current graph node
-          tertiary: "#e45858", // hover states and visited graph nodes
-          highlight: "rgba(43, 44, 52, 0.1)", // internal link background, highlighted text/lines of code
-          textHighlight: "#fff23688", // markdown highlighted text background
+          light: "#f3ead3", // page background
+          lightgray: "#d8d3ba", // borders
+          gray: "#d8d3ba", // graph links, heavier borders
+          darkgray: "#5c6a72", // body text
+          dark: "#5c6a72", // header text and icons
+          secondary: "#8da101", // link colour, current graph node
+          tertiary: "#93b259", // hover states and visited graph nodes
+          highlight: "#8da10126", // internal link background, highlighted text/lines of code
+          textHighlight: "#8da10126", // markdown highlighted text background
         },
         darkMode: {
-          light: "#232946", // page background
-          lightgray: "#121629", // borders
-          gray: "#7984bc", // graph links, heavier borders
-          darkgray: "#b8c1ec", // body text
-          dark: "#dceebb", // header text and icons
-          secondary: "#bbeee6", // link colour, current graph node
-          tertiary: "#eebbc3", // hover states and visited graph nodes
-          highlight: "rgba(184, 193, 236, 0.2)", // internal link background, highlighted text/lines of code
-          textHighlight: "#fff23688", // markdown highlighted text background
+          light: "#1e2326", // page background
+          lightgray: "#2e383c", // borders
+          gray: "#2e383c", // graph links, heavier borders
+          darkgray: "#d3c6aa", // body text
+          dark: "#d3c6aa", // header text and icons
+          secondary: "#a7c080", // link colour, current graph node
+          tertiary: "#a7c080", // hover states and visited graph nodes
+          highlight: "#a7c08026", // internal link background, highlighted text/lines of code
+          textHighlight: "#a7c08026", // markdown highlighted text background
         },
       },
     },

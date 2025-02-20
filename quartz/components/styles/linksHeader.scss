@@ -13,6 +13,13 @@ header {
 
 .page-title {
   font-size: 1.85em;
+  a {
+    color: var(--dark);
+  }
+  a:hover {
+    color: var(--dark) !important;
+    text-decoration: none;
+  }
 }
 
 #links-header {

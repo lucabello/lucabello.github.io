@@ -12,9 +12,12 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
   return (
+
+    <div style="display: flex">
     <h1 class={classNames(displayClass, "page-title")}>
-      <a href={baseDir}>{title}</a>
+      <a href={baseDir}>{title} 🦆</a>
     </h1>
+    </div>
   )
 }
 
@@ -102,9 +105,18 @@ export default (() => {
       <div class="header-div">
         <PageTitle classNames="page-title" fileData={fileData} cfg={cfg} displayClass={displayClass}/>
         <div id="links-header">
-          <span><a href="/posts">Posts</a></span>
-          <span><a href="/tags">Tags</a></span>
-          <span><a href="/pages/cv">CV</a></span>
+          <span>
+              <span class="iconify-inline bigger-icon" data-icon="mdi:fountain-pen-tip" style="margin-right: 0.8em;"></span>
+              <a href="/posts">Posts</a>
+          </span>
+          <span>
+              <span class="iconify-inline bigger-icon" data-icon="mdi:tag-text" style="margin-right: 0.8em;"></span>
+              <a href="/tags">Tags</a>
+          </span>
+          <span>
+              <span class="iconify-inline bigger-icon" data-icon="mdi:resume" style="margin-right: 0.8em;"></span>
+              <a href="/pages/cv">CV</a>
+          </span>
           <span>|</span>
           <span style="display: flex; margin-top: 0.1em;">
               <Search displayClass={displayClass} cfg={cfg}/>

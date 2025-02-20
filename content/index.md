@@ -4,11 +4,11 @@ rss: false
 show-featured-notes: true
 show-recent-notes: true
 ---
-# Hey, I'm Luca 🦆
+# Hey, I'm Luca :)
 
 [RSS Feed 📡](/index.xml)
 
-Hey! I’m Luca, just another software engineer with a passion for writing.
+Hey! I’m just another software engineer with a passion for writing.
 And ducks. 🦆
 
 If you read something you like, or simply would like to get in touch, do so via Mastodon or anywhere else!
