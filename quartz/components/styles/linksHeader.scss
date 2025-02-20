@@ -3,7 +3,6 @@
 // LinksHeader
 header {
   display: block;
-  margin-top: 1rem;
 }
 
 .header-div {
@@ -14,20 +13,14 @@ header {
 
 .page-title {
   font-size: 1.85em;
-  margin-top: 0.8em;
 }
 
 #links-header {
   display: flex;
   flex-wrap: nowrap;
   align-items: right;
-  column-gap: 1.5em;
+  column-gap: 1.8em;
   justify-content: flex-end;
-  margin: 0 0.2em;
-
-  span {
-    margin-top: 2.3em;
-  }
 
   a {
     color: var(--dark);
@@ -62,7 +55,7 @@ header {
   border: none;
   width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin-left: 20px;
   text-align: inherit;
 
   & svg {
@@ -103,28 +96,17 @@ header {
 
 // Search
 .search {
-  // min-width: fit-content;
-  min-width: 10rem;
-  max-width: 14rem;
-  @media all and ($mobile) {
-    flex-grow: 0.3;
-  }
-
   & > .search-button {
-    background-color: var(--lightgray);
+    background-color: var(--light);
     border: none;
-    border-radius: 4px;
+    width: 20px;
+    height: 20px;
     font-family: inherit;
     font-size: inherit;
-    height: 2rem;
     padding: 0;
     display: flex;
     align-items: center;
     text-align: inherit;
-    cursor: pointer;
-    white-space: nowrap;
-    width: 100%;
-    justify-content: space-between;
 
     & > p {
       display: inline;
@@ -133,9 +115,8 @@ header {
 
     & svg {
       cursor: pointer;
-      width: 18px;
-      min-width: 18px;
-      margin: 0 0.5rem;
+      width: 20px;
+      min-width: 20px;
 
       .search-path {
         stroke: var(--darkgray);

@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       websiteId: "0b4ba915-fa05-416d-8cdd-21cdb0060974",
     },
     locale: "en-US",
-    baseUrl: "lucabello.github.io",
+baseUrl: "lucabello.github.io",
     ignorePatterns: ["private", "templates", ".obsidian", "archive"],
     defaultDateType: "published",
     generateSocialImages: false,
@@ -26,31 +26,31 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Comfortaa",
-        body: "Comfortaa",
+        header: "DM Mono",
+        body: "DM Mono",
         code: "Azeret Mono",
       },
       colors: {
         lightMode: {
-          light: "#fdf6e3 ", // page background
-          lightgray: "#ede1bf", // borders
-          gray: "#d7bc70", // graph links, heavier borders
-          darkgray: "#002b36", // body text
-          dark: "#cb4b16", // header text and icons
-          secondary: "#b58900", // link colour, current graph node
-          tertiary: "#6c782e", // hover states and visited graph nodes
-          highlight: "rgba(181, 137, 0, 0.07)", // internal link background, highlighted text/lines of code
+          light: "#fffffe", // page background
+          lightgray: "#d6cffa", // borders
+          gray: "#b7abf5", // graph links, heavier borders
+          darkgray: "#2b2c34", // body text
+          dark: "#6246ea", // header text and icons
+          secondary: "#586fe4", // link colour, current graph node
+          tertiary: "#e45858", // hover states and visited graph nodes
+          highlight: "rgba(43, 44, 52, 0.1)", // internal link background, highlighted text/lines of code
           textHighlight: "#fff23688", // markdown highlighted text background
         },
         darkMode: {
-          light: "#141617", // page background
-          lightgray: "#282828", // borders
-          gray: "#504945", // graph links, heavier borders
-          darkgray: "#ddc7a1", // body text
-          dark: "#e78a4e", // header text and icons
-          secondary: "#d8a657", // link colour, current graph node
-          tertiary: "#a9b665", // hover states and visited graph nodes
-          highlight: "rgba(216, 166, 87, 0.12)", // internal link background, highlighted text/lines of code
+          light: "#232946", // page background
+          lightgray: "#121629", // borders
+          gray: "#7984bc", // graph links, heavier borders
+          darkgray: "#b8c1ec", // body text
+          dark: "#dceebb", // header text and icons
+          secondary: "#bbeee6", // link colour, current graph node
+          tertiary: "#eebbc3", // hover states and visited graph nodes
+          highlight: "rgba(184, 193, 236, 0.2)", // internal link background, highlighted text/lines of code
           textHighlight: "#fff23688", // markdown highlighted text background
         },
       },

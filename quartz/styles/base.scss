@@ -86,11 +86,6 @@ a {
     border-radius: 5px;
     line-height: 1.4rem;
 
-    &:hover {
-      text-decoration: underline;
-      text-decoration-style: dashed;
-    }
-
     &::after {
 
     }
@@ -153,14 +148,6 @@ a {
     & li > * {
       margin-top: 0;
       margin-bottom: 0;
-    }
-
-    p > strong {
-      color: var(--dark);
-    }
-
-    li > strong {
-      color: var(--dark);
     }
   }
 
@@ -539,9 +526,9 @@ p > img + em {
 hr {
   width: 100%;
   margin: 2rem auto;
-  height: 1px;
+  height: 0.1rem;
   border: none;
-  background-color: var(--lightgray);
+  background-color: var(--gray);
 }
 
 audio,

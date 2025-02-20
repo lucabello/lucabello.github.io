@@ -31,7 +31,6 @@ const Search: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) =>
   return (
     <div class={classNames(displayClass, "search")}>
       <button class="search-button" id="search-button">
-        <p>{i18n(cfg.locale).components.search.title}</p>
         <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7">
           <title>Search</title>
           <g class="search-path" fill="none">
@@ -105,13 +104,16 @@ export default (() => {
         <div id="links-header">
           <span><a href="/posts">Posts</a></span>
           <span><a href="/tags">Tags</a></span>
-          <span><a href="/pages/about">About</a></span>
           <span><a href="/pages/cv">CV</a></span>
-          <span style="margin-top: 1.9em"><Search displayClass={displayClass} cfg={cfg}/></span>
-          <span><Darkmode displayClass={displayClass} cfg={cfg}/></span>
+          <span>|</span>
+          <span style="display: flex; margin-top: 0.1em;">
+              <Search displayClass={displayClass} cfg={cfg}/>
+              <Darkmode displayClass={displayClass} cfg={cfg}/>
+          </span>
+          <span></span>
         </div>
       </div>
-      <hr style="border-top: 2px var(--gray) solid; margin-top: 1.3rem"></hr>
+      <hr style="margin-top: 1.3rem"></hr>
       </div>
     )
   }

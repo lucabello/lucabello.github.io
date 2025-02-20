@@ -118,6 +118,10 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
       const emitted: FilePath[] = []
       const linkIndex: ContentIndex = new Map()
       for (const [tree, file] of content) {
+        const rssDisabled = (file.data.frontmatter?.rss! === false)
+        const isFileInPages = file.data.slug!.startsWith("pages/")
+        if (rssDisabled || isFileInPages)
+          continue
         const slug = file.data.slug!
         const date = getDate(ctx.cfg.configuration, file.data) ?? new Date()
         if (opts?.includeEmptyFiles || (file.data.text && file.data.text !== "")) {
