@@ -1,6 +1,7 @@
 ---
 title: Curriculum Vitae
 rss: false
+comments: false
 ---
 # Luca Bello
 

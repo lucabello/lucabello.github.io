@@ -27,7 +27,17 @@ export const defaultContentPageLayout: PageLayout = {
   right: [],
   afterBody: [
     Component.FeaturedNotesOnDemand({showTags: false}),
-    Component.RecentNotesOnDemand({showTags: false})
+    Component.RecentNotesOnDemand({showTags: false}),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        repo: 'lucabello/lucabello.github.io',
+        repoId: 'R_kgDOLT_yAA',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOLT_yAM4CnUuw',
+        reactionsEnabled: true,
+      }
+    }),
   ]
 }
 

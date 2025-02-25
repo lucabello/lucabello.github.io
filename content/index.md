@@ -1,6 +1,7 @@
 ---
 title: Duckling Dev
 rss: false
+comments: false
 show-featured-notes: true
 show-recent-notes: true
 ---
