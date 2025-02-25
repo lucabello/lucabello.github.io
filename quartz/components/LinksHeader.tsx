@@ -107,11 +107,11 @@ export default (() => {
         <div id="links-header">
           <span>
               <span class="iconify-inline bigger-icon" data-icon="mdi:fountain-pen-tip" style="margin-right: 0.8em;"></span>
-              <a href="/posts">Posts</a>
+              <a href="/posts/">Posts</a>
           </span>
           <span>
               <span class="iconify-inline bigger-icon" data-icon="mdi:tag-text" style="margin-right: 0.8em;"></span>
-              <a href="/tags">Tags</a>
+              <a href="/tags/">Tags</a>
           </span>
           <span>
               <span class="iconify-inline bigger-icon" data-icon="mdi:resume" style="margin-right: 0.8em;"></span>
