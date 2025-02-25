@@ -1,5 +1,6 @@
 ---
 title: Duckling Dev
+description: "Just another software engineer with a passion for writing. And ducks. 🦆"
 rss: false
 comments: false
 show-featured-notes: true

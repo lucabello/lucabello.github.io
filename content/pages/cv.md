@@ -1,5 +1,6 @@
 ---
 title: Curriculum Vitae
+description: ""
 rss: false
 comments: false
 ---
