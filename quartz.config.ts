@@ -21,7 +21,7 @@ const config: QuartzConfig = {
 baseUrl: "lucabello.github.io",
     ignorePatterns: ["private", "templates", ".obsidian", "archive"],
     defaultDateType: "published",
-    generateSocialImages: false,
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

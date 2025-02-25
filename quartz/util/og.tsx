@@ -11,8 +11,14 @@ import { ThemeKey } from "./theme"
  * @returns FontOptions for header and body
  */
 export async function getSatoriFont(headerFontName: string, bodyFontName: string) {
-  const headerWeight = 700 as FontWeight
-  const bodyWeight = 400 as FontWeight
+  // const headerWeight = 700 as FontWeight
+  // const bodyWeight = 400 as FontWeight
+
+  // headerWeight and bodyWeight must be weights supported by the used font!
+  // Currently, I'm using the font 'DM Mono' for both headers and body, which
+  // supports weights of 300/400/500.
+  const headerWeight = 500 as FontWeight
+  const bodyWeight = 300 as FontWeight
 
   // Fetch fonts
   const headerFont = await fetchTtf(headerFontName, headerWeight)
