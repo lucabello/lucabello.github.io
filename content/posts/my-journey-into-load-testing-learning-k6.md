@@ -98,18 +98,18 @@ mindmap
     ⚙️ **Performance Testing**<br/>Measuring how well a system works
         **Frontend**<br/>Testing the end-user experience of an application, often via browser
         **Backend**<br/>Testing the underlying application
-            scalability["**Scalability**<br/>Adjusting to steadily increasing levels of demans"]
-            elasticity["**Elasticity**<br/>Conserving resources on lower deamnd"]
+            scalability["**Scalability**<br/>Adjusting to steadily increasing levels of demand"]
+            elasticity["**Elasticity**<br/>Conserving resources on lower demand"]
             availability["**Availability**<br/>Uptime of each component"]
-            reliabaility["**Reliability**<br/>Consistent behaviors in different environments"]
-            resilency["**Resiliency**<br/>Gracefully withstanding the unexpected"]
+            reliability["**Reliability**<br/>Consistent behaviors in different environments"]
+            resiliency["**Resiliency**<br/>Gracefully withstanding the unexpected"]
             latency["**Latency**<br/>How fast a system handles requests"]
-    🏋 **Load Testing**<br/>Subset of *Performance Testing* deling with heavier loads
+    🏋 **Load Testing**<br/>Subset of *Performance Testing* dealing with heavier loads
         **Parameters**
             vus["**Virtual Users (VUs)**<br/>Independent and concurrent threads of execution"]
             iterations["**Iterations**<br/>Total number of repetitions of a script"]
-            throughput["**Throughput**<br/>How much load is generaated over time (VUs/s, iterations/s)"]
-            user-flows["**Usesr Flows**<br/>Actions carried out in a script"]
+            throughput["**Throughput**<br/>How much load is generated over time (VUs/s, iterations/s)"]
+            user-flows["**User Flows**<br/>Actions carried out in a script"]
             load-profile["**Load Profile**<br/>Shape of the traffic as a time series, including delays, ramping up or down, etc."]
             duration["**Duration**<br/>The total runtime for a test"]
         **Scenarios**
@@ -117,8 +117,8 @@ mindmap
             average-test["**Average Load Test**<br/>Typical production usage.<br/>*Load profile* has ramp-up, stable, and down periods; *duration* is typically 1h"]
                 stress-test["**Stress Test**<br/>Highest *expected* load.<br/>Like an *average load test*, but with higher *throughput*"]
                 soak-test["**Soak Test (or Endurance Test)**<br/>For problems that take long to appear.<br/>Like an *average load test*, but with higher *duration*"]
-            spike-test["**Spike Test**<br/>*Unexpected* maassive increase of traffic.<br/>Tiny ramp-up/down, high *throughput, often one *user flow*"]
-            brekapoint-test["**Breakpoint Test**<br/>Observe when performance degrades.<br/>*Only ramp-up/stable periods, exploratory test to measure of much a system can handle"]
+            spike-test["**Spike Test**<br/>*Unexpected* massive increase of traffic.<br/>Tiny ramp-up/down, high *throughput*, often one *user flow*"]
+            breakpoint-test["**Breakpoint Test**<br/>Observe when performance degrades.<br/>*Only ramp-up/stable periods, exploratory test to measure how much a system can handle"]
     ✏️ **Script**
         check["**Check**<br/>Light assertions that don't block the execution"]
         thinktime["**Think Time**<br/>Pause in the script to simulate real-user delays in application usage"]
@@ -135,7 +135,6 @@ mindmap
                 [*http_req_\\**<br/>Metrics about different timings of HTTP requests]
                 [*iteration_\\**<br/>Metrics about a single script repetition]
             [**Execution Summary**<br/>Overview of the test run]
-
 ```
 
 

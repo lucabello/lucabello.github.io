@@ -170,14 +170,14 @@ document.addEventListener("nav", async () => {
     theme: darkMode ? "dark" : "base",
     themeVariables: {
       fontFamily: computedStyleMap["--codeFont"],
-      primaryColor: computedStyleMap["--light"],
-      primaryTextColor: computedStyleMap["--darkgray"],
-      primaryBorderColor: computedStyleMap["--tertiary"],
-      lineColor: computedStyleMap["--darkgray"],
-      secondaryColor: computedStyleMap["--secondary"],
-      tertiaryColor: computedStyleMap["--tertiary"],
-      clusterBkg: computedStyleMap["--light"],
-      edgeLabelBackground: computedStyleMap["--highlight"],
+      // primaryColor: computedStyleMap["--light"],
+      // primaryTextColor: computedStyleMap["--darkgray"],
+      // primaryBorderColor: computedStyleMap["--tertiary"],
+      // lineColor: computedStyleMap["--darkgray"],
+      // secondaryColor: computedStyleMap["--lightgray"],
+      // tertiaryColor: computedStyleMap["--gray"],
+      // clusterBkg: computedStyleMap["--light"],
+      // edgeLabelBackground: computedStyleMap["--highlight"],
     },
   })
   await mermaid.run({ nodes })
