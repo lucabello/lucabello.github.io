@@ -36,6 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
         category: 'Announcements',
         categoryId: 'DIC_kwDOLT_yAM4CnUuw',
         reactionsEnabled: true,
+        mapping: "title",
       }
     }),
   ]
