@@ -1,0 +1,23 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+/* Generic CSS */
+
+p > a, li > a, a:hover {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 2px;
+}
+
+/* Social Media Icons */
+.bigger-icon {
+    transform: scale(1.8);
+}
+a > .bigger-icon {
+    margin-right: 0.6em
+}
+.color-hover:hover {
+    transform: scale(2) rotate(10deg); /* Rotate 10 degrees clockwise */
+}
