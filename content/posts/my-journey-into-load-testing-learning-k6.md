@@ -4,6 +4,9 @@ description: "I'm studying load tests and `k6` - here's what I've learned."
 date: 2025-02-25
 creationDate: 2025-02-19
 featured: true
+tags:
+  - testing
+  - learning
 ---
 Over the past week, I've been learning about [`k6`](https://github.com/grafana/k6) and how to use it. This post summarizes what I've learned with the goals of summarizing the topic, and allowing me to test my knowledge!
 
@@ -51,7 +54,7 @@ Once you have an idea of all three, you can start writing some code!
 
 A `k6` script can be described by the following parameters:
 - **virtual users** (or *VU*), independent and concurrent threads of execution;
-- **iterations**, the total number of repetitions[^1] of the script;
+- **iterations**, the total number of repetitions of the script;
 - **throughput**, how much load is generated over time, measured either in `VU/s`, `requests/s`, or `iterations/s`;
 - **user flows**, the actions carried out in the script;
 - **load profile**, the shape of the traffic as a time series, including delays, ramping up or down, etc.;
