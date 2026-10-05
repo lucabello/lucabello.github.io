@@ -1,0 +1,36 @@
+---
+import type { TocItem } from "@/utils/generateToc";
+
+interface Props {
+	heading: TocItem;
+}
+
+const {
+	heading: { children, depth, slug, text },
+} = Astro.props;
+
+const depthStyles: Record<number, string> = {
+	2: "mt-3 font-semibold",
+	3: "mt-2 text-sm text-muted",
+	4: "mt-1.5 text-xs text-muted italic",
+};
+---
+
+<li class={`${depth > 2 ? "ms-3" : ""}`}>
+	<a
+		class={`line-clamp-2 hover:text-accent ${depthStyles[depth] ?? depthStyles[4]}`}
+		href={`#${slug}`}
+	>
+		<span aria-hidden="true" class="me-1">
+			{"#".repeat(depth - 1)}
+		</span>
+		{text}
+	</a>
+	{!!children.length && (
+		<ol>
+			{children.map((subheading) => (
+				<Astro.self heading={subheading} />
+			))}
+		</ol>
+	)}
+</li>

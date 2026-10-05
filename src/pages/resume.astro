@@ -1,0 +1,597 @@
+---
+import { Icon } from "astro-icon/components";
+import "@fontsource/ubuntu/300.css";
+import "@fontsource/ubuntu/400.css";
+import "@fontsource/ubuntu/500.css";
+import "@fontsource/ubuntu/700.css";
+import "@fontsource/ubuntu/400-italic.css";
+
+const email = "lusgabello@gmail.com";
+
+const facts = [
+	{
+		label: "Languages",
+		html: "Italian (native) <span class='sep'>·</span> English (C2) <span class='sep'>·</span> French (A2) <span class='sep'>·</span> Portuguese (A2) <span class='sep'>·</span> German (A1)",
+	},
+	{
+		label: "Areas of Expertise",
+		html: "Observability, SRE, Project Management, CI/CD, Data Science, Open Source",
+	},
+	{
+		label: "Main Programming Languages",
+		html: "Python, Go, Scala, C, C++, Bash, SQL",
+	},
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="noindex" name="robots" />
+		<title>Luca Bello — Resume</title>
+		<meta
+			content="Luca Bello — Software Engineer, Observability. One-page resume."
+			name="description"
+		/>
+	</head>
+	<body>
+		<div class="actions no-print">
+			<button id="print" type="button">
+				Save as PDF
+			</button>
+			<a href="/cv/">Long-form CV</a>
+		</div>
+
+		<main class="sheet">
+			<header class="head">
+				<div class="nameplate">
+					<h1>Luca Bello</h1>
+					<p class="reach">
+						<a class="reach-link" href="https://github.com/lucabello">
+							<Icon aria-hidden="true" class="reach-icon" focusable="false" name="mdi:github" />
+							lucabello
+						</a>{" "}
+						<span class="sep">·</span>{" "}
+						<a class="reach-link" href={`mailto:${email}`}>
+							<Icon
+								aria-hidden="true"
+								class="reach-icon"
+								focusable="false"
+								name="mdi:email-outline"
+							/>
+							{email}
+						</a>
+					</p>
+				</div>
+				<dl class="facts">
+					{facts.map(({ label, html }) => (
+						<>
+							<dt>{label}</dt>
+							<dd set:html={html} />
+						</>
+					))}
+				</dl>
+			</header>
+
+			<section class="block">
+				<h2>Experience</h2>
+
+				<article class="entry">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>Senior Observability Technical Lead</strong>{" "}
+							<span class="org">· Canonical</span>
+						</h3>
+						<span class="when">2026 — now</span>
+					</div>
+					<p class="summary">
+						Technical lead of the <a href="https://documentation.ubuntu.com/observability/track-3.0/">Observability team</a> and interim manager of the Tracing and profiling
+						subteam. Defines the team's technical direction, priorities and roadmap.
+					</p>
+					<ul>
+						<li>
+							<strong>
+								<a href="https://documentation.ubuntu.com/observability/track-3.0/release-notes/">LTS release</a>
+							</strong>: owned the first LTS release of COS and COS Lite from scoping through delivery,
+							spanning four months, 884 pull requests and 8 stakeholders from other departments.
+						</li>
+						<li>
+							<strong>Roadmap planning</strong>: led the team's roadmap planning and presented it to senior management,
+							introducing a new planning process based on individual research and demos;
+							provided weekly one-on-one mentoring across the team.
+						</li>
+						<li>
+							<strong>External impact</strong>: led the team's engagement with OWASP, resulting in a citation in the{" "}
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#implementation">OWASP Logging Vocabulary cheat sheet</a>; co-authored the Juju page in the{" "}
+							<a href="https://grafana.com/docs/mimir/next/set-up/juju/">upstream Mimir docs</a>.
+						</li>
+					</ul>
+				</article>
+
+				<article class="entry">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>Observability Technical Lead</strong> <span class="org">· Canonical</span>
+						</h3>
+						<span class="when">2024 — 2026</span>
+					</div>
+					<ul>
+						<li>
+							<strong>Ownership</strong>: took projects from idea to delivery (e.g. <a href="/posts/my-journey-into-load-testing-learning-k6/">load testing</a>),
+							mentored juniors and moderated all team meetings.
+						</li>
+						<li>
+							<strong>Delivery</strong>: delivered over 50% of a 5-person team's work, completing
+							250% more planned days per sprint than peers.
+						</li>
+						<li>
+							<strong>Security</strong>: drove CVE scanning and SSDLC, and spearheaded company
+							vulnerability response guidelines.
+						</li>
+					</ul>
+				</article>
+
+				<article class="entry">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>Software Engineer</strong> <span class="org">· Canonical</span>
+						</h3>
+						<span class="when">2022 — 2024</span>
+					</div>
+					<ul>
+						<li>
+							<strong>Supply chain</strong>: led packaging of upstream Observability software as {" "}
+							<a href="https://ubuntu.com/containers/rockcraft">rocks</a> (minimal, reproducible, patched images).
+						</li>
+						<li>
+							<strong>
+								<a href="https://github.com/canonical/observability">CI/CD</a>
+							</strong>: single-handedly built department-wide automations that set new {" "}
+							<a href="https://discourse.charmhub.io/t/16697">quality standards</a>.
+						</li>
+						<li>
+							<strong>Testing</strong>: redesigned testing with feature-first semantics and
+							parallelization, 225% faster suites.
+						</li>
+					</ul>
+				</article>
+
+				<article class="entry">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>Junior Fellow</strong> <span class="org">· CERN</span>
+						</h3>
+						<span class="when">2020 — 2022</span>
+					</div>
+					<p class="summary">
+						Part of the{" "}
+						<a href="https://monit.web.cern.ch/">
+							<strong>CERN IT Monitoring team</strong>
+						</a>
+						, operating both internally over CERN's data center operations and externally over the
+						WLCG (Worldwide LHC Computing Grid), with Agile and DevOps methodologies.
+					</p>
+					<p class="summary">
+						I focused on designing, developing and maintaining a{" "}
+						<strong>large-scale high-availability infrastructure</strong> which handled the entire
+						monitoring data pipeline to provide Observability to CERN's operations.
+					</p>
+				</article>
+			</section>
+
+			<section class="block">
+				<h2>Education</h2>
+
+				<article class="entry compact">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>MSc Data Science</strong> <span class="org">· Politecnico di Torino</span>
+						</h3>
+						<span class="when">2018 — 2020</span>
+					</div>
+					<p class="summary">
+						110/110 with honours. Erasmus at Chalmers University, Sweden. Thesis:{" "}
+						<a href="https://odr.chalmers.se/items/458f154c-0947-4d67-a1b1-e6218bd34a79">
+							Machine learning for big sequence data: Wavelet-compressed Hidden Markov Models
+						</a>
+					</p>
+				</article>
+
+				<article class="entry compact">
+					<div class="entry-head">
+						<h3>
+							⋄ CyberChallenge.IT{" "}
+							<span class="org">
+								· CINI <small>(Italian Cybersecurity National Lab)</small>
+							</span>
+						</h3>
+						<span class="when">2018</span>
+					</div>
+					<p class="summary">
+						Training on security and ethical hacking. Represented Politecnico di Torino at a
+						national Attack-Defense CTF in Rome.
+					</p>
+				</article>
+
+				<article class="entry compact">
+					<div class="entry-head">
+						<h3>
+							⋄ Entrepreneurship <span class="org">· European Innovation Academy</span>
+						</h3>
+						<span class="when">2017</span>
+					</div>
+					<p class="summary">
+						Startup accelerator with participants from 70+ countries. Acquired leadership skills,
+						communication and planning.
+					</p>
+				</article>
+
+				<article class="entry compact">
+					<div class="entry-head">
+						<h3>
+							⋄ <strong>BSc Computer Engineering</strong>{" "}
+							<span class="org">· Politecnico di Torino</span>
+						</h3>
+						<span class="when">2015 — 2018</span>
+					</div>
+					<p class="summary">
+						110/110 with honours. Member of the{" "}
+						<a href="https://www.polito.it/en/education/polito-learning-experiences/learning-experiences-in-interdisciplinarity/percorso-intraprendenti">
+							"Young Talents"
+						</a>{" "}
+						excellence program.
+					</p>
+				</article>
+			</section>
+
+			<section class="block">
+				<h2>Publications &amp; Awards</h2>
+
+				<article class="entry compact">
+					<div class="entry-head">
+						<h3>
+							⋄ Compressed computations using Wavelets for Hidden Markov Models with continuous
+							observations
+						</h3>
+						<span class="when">Jun 2023</span>
+					</div>
+					<p class="summary">
+            Bello L, Wiedenhöft J, Schliep A ·{" "}
+            PLOS One, {" "}
+						<a href="https://doi.org/10.1371/journal.pone.0286074">10.1371/journal.pone.0286074</a>
+					</p>
+				</article>
+
+				<article class="entry compact">
+					<h3>
+						⋄ Canonical Awards{" "}
+						<span class="awards">
+							· Valuable Contribution (Apr 2026), Valuable Contribution (Jun 2024), Thank You (Mar 2023)
+						</span>
+					</h3>
+				</article>
+			</section>
+		</main>
+
+		<script>
+			document.getElementById("print")?.addEventListener("click", () => window.print());
+		</script>
+	</body>
+</html>
+
+<style>
+	/* ---------------------------------------------------------------
+	   Fitting knobs. Overflowing onto a second page? Nudge these down
+	   in small steps (0.25pt / 0.05 / 0.1rem) and re-check print preview.
+	   --------------------------------------------------------------- */
+	:root {
+		--font-size: 9.5pt;
+		--line-height: 1.4;
+		--block-gap: 0.8rem;
+		--entry-gap: 0.55rem;
+		--page-margin: 13mm;
+
+		--ink: #24292f;
+		--ink-soft: #57606a;
+		--rule: #d5d8dc;
+		--accent: #2f6f5e;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: #edeef0;
+		color: var(--ink);
+		font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: var(--font-size);
+		line-height: var(--line-height);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	/* The sheet mimics an A4 page on screen so what you see is what prints. */
+	.sheet {
+		background: #fff;
+		margin: 1.5rem auto 3rem;
+		max-width: 210mm;
+		min-height: 297mm;
+		padding: var(--page-margin);
+		box-shadow: 0 2px 16px rgb(0 0 0 / 12%);
+	}
+
+	a {
+		color: var(--accent);
+		text-decoration: underline;
+		text-decoration-style: dashed;
+		text-underline-offset: 0.15em;
+	}
+
+	a:hover {
+		text-decoration-style: solid;
+	}
+
+	.sep {
+		color: var(--rule);
+		padding: 0 0.3em;
+	}
+
+	.muted {
+		color: var(--rule);
+	}
+
+	/* --- header --- */
+	.head {
+		border-bottom: 1px solid var(--rule);
+		padding-bottom: 0.5rem;
+	}
+
+	.nameplate {
+		align-items: baseline;
+		display: flex;
+		gap: 1rem;
+		justify-content: space-between;
+	}
+
+	h1 {
+		font-size: 1.9em;
+		font-weight: 700;
+		letter-spacing: -0.015em;
+		line-height: 1.1;
+	}
+
+	.reach {
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	.reach-link {
+		align-items: center;
+		display: inline-flex;
+		gap: 0.3em;
+	}
+
+	.reach-icon {
+		height: 1em;
+		width: 1em;
+	}
+
+	/* Label/value grid: labels size to the longest one, values share a column. */
+	.facts {
+		column-gap: 0.6em;
+		color: var(--ink-soft);
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		margin-top: 0.35rem;
+	}
+
+	.facts dt {
+		color: var(--ink);
+		font-weight: 700;
+	}
+
+	.facts dt::after {
+		content: ":";
+	}
+
+	/* --- sections --- */
+	.block {
+		margin-top: var(--block-gap);
+	}
+
+	h2 {
+		border-bottom: 1px solid var(--rule);
+		color: var(--accent);
+		font-size: 0.82em;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		padding-bottom: 0.15rem;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		color: var(--ink-soft);
+		font-size: 0.82em;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		margin-top: var(--entry-gap);
+		text-transform: uppercase;
+	}
+
+	.entry {
+		margin-top: var(--entry-gap);
+	}
+
+	.entry-head {
+		align-items: baseline;
+		display: flex;
+		gap: 0.75rem;
+		justify-content: space-between;
+	}
+
+	h3 {
+		font-size: 1em;
+		font-weight: 400;
+	}
+
+	.org {
+		color: var(--ink-soft);
+		font-weight: 400;
+	}
+
+	.when {
+		color: var(--ink-soft);
+		font-size: 0.9em;
+		white-space: nowrap;
+	}
+
+	.summary {
+		color: var(--ink-soft);
+		margin-top: 0.1rem;
+	}
+
+	.awards {
+		color: var(--ink-soft);
+		font-size: 0.9em;
+	}
+
+	ul {
+		margin-top: 0.25rem;
+		padding-left: 1.05em;
+	}
+
+	li + li {
+		margin-top: 0.15rem;
+	}
+
+	li::marker {
+		color: var(--rule);
+	}
+
+	.stack {
+		color: var(--ink-soft);
+		font-size: 0.87em;
+		margin-top: 0.3rem;
+	}
+
+	.compact .summary {
+		margin-top: 0.05rem;
+	}
+
+	/* Two-up lists: title on one line, description beneath in soft ink. */
+	.tight {
+		list-style: none;
+		margin-top: 0.3rem;
+		padding-left: 0;
+	}
+
+	.tight li {
+		color: var(--ink-soft);
+	}
+
+	.tight li + li {
+		margin-top: 0.3rem;
+	}
+
+	.tight strong {
+		color: var(--ink);
+	}
+
+	.columns {
+		column-gap: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* --- screen-only chrome --- */
+	.actions {
+		align-items: center;
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		padding-top: 1.5rem;
+	}
+
+	.actions button,
+	.actions a {
+		background: var(--accent);
+		border: 0;
+		border-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		font: inherit;
+		font-size: 10pt;
+		padding: 0.4rem 0.9rem;
+	}
+
+	.actions a {
+		background: transparent;
+		color: var(--accent);
+	}
+
+	/* --- print --- */
+	@media print {
+		@page {
+			margin: 13mm;
+			size: A4;
+		}
+
+		body {
+			background: #fff;
+		}
+
+		.sheet {
+			box-shadow: none;
+			margin: 0;
+			max-width: none;
+			min-height: 0;
+			padding: 0;
+		}
+
+		.no-print {
+			display: none !important;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		.entry,
+		.block,
+		.column {
+			break-inside: avoid;
+		}
+
+		h2,
+		h3,
+		h4 {
+			break-after: avoid;
+		}
+	}
+
+	/* Screen-only responsive fallback: below this width the sheet no longer
+	   fits, so stack single-column. Scoped to screen so it never matches
+	   print, where the page is a fixed 210mm (A4) regardless of viewport. */
+	@media screen and (max-width: 220mm) {
+		.sheet {
+			margin: 0.75rem;
+			min-height: 0;
+		}
+
+		.nameplate {
+			display: block;
+		}
+
+		.reach {
+			text-align: left;
+		}
+
+		.columns {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

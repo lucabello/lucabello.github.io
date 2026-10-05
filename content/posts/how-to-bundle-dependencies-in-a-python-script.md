@@ -1,9 +1,8 @@
 ---
 title: How to bundle dependencies in a Python script
 description: Using `uv` to run scripts with external dependencies.
-date: 2024-12-07
-creationDate: 2024-12-07
-featured: true
+publishDate: 2024-12-07
+pinned: true
 draft: false
 tags:
   - how-to

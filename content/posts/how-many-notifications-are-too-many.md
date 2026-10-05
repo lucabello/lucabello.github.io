@@ -1,9 +1,8 @@
 ---
 title: How many notifications are too many?
 description: Humans aren't made to handle the amount of notifications we receive nowadays. What's the real issue and how can you prevent it?
-date: 2024-02-21
-creationDate: 2024-02-20
-featured: false
+publishDate: 2024-02-21
+pinned: false
 draft: false
 tags:
   - observability
@@ -49,7 +48,6 @@ There's even a number of applications that will “group up” notifications and
 
 **In Observability**, you should make sure you're not alerting on _non-critical_ issues just because you can. You should re-evaluate what's important, and only keep alerts that actually require you to take action!
 
-
 [^overload]: Arnold M, Goldschmitt M, Rigotti T. Dealing with information overload: a comprehensive review. Front Psychol. 2023 Jun 21;14:1122200. doi: [10.3389/fpsyg.2023.1122200](https://doi.org/10.3389%2Ffpsyg.2023.1122200). PMID: 37416535; PMCID: PMC10322198.
 
-[^icu]: Rozenes, S., Fux, A., Kagan, I. *et al.* Alert-Grouping: Smart Personalization of Monitoring System Thresholds to Help Healthcare Teams Struggle with Alarm Fatigue in Intensive Care. *J Med Syst* **47**, 113 (2023). https://doi.org/10.1007/s10916-023-02010-6
+[^icu]: Rozenes, S., Fux, A., Kagan, I. _et al._ Alert-Grouping: Smart Personalization of Monitoring System Thresholds to Help Healthcare Teams Struggle with Alarm Fatigue in Intensive Care. _J Med Syst_ **47**, 113 (2023). https://doi.org/10.1007/s10916-023-02010-6

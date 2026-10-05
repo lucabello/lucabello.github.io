@@ -1,0 +1,261 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	code: string;
+}
+
+const { code } = Astro.props;
+---
+
+<div class="mermaid-diagram not-prose">
+	<div class="mermaid-diagram__canvas" data-mermaid-code={code}>
+		<p class="mermaid-diagram__placeholder">Loading diagram…</p>
+	</div>
+	<button class="mermaid-diagram__zoom-btn" type="button" aria-label="Open diagram in full screen">
+		<Icon aria-hidden="true" focusable="false" name="mdi:fullscreen" />
+	</button>
+</div>
+
+<script>
+	import mermaid from "mermaid";
+
+	function themeVariables() {
+		// mermaid's internal color library can't parse the site's oklch() custom
+		// properties, and modern Chrome's canvas fillStyle now round-trips oklch()
+		// as oklch() instead of downgrading it, so read back rasterized pixel bytes
+		// instead — those are always plain 8-bit sRGB regardless of the input space.
+		const canvas = document.createElement("canvas");
+		canvas.width = 1;
+		canvas.height = 1;
+		const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+		const styles = getComputedStyle(document.documentElement);
+		const color = (name: string) => {
+			ctx.fillStyle = styles.getPropertyValue(name).trim();
+			ctx.fillRect(0, 0, 1, 1);
+			const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+			return `rgb(${r}, ${g}, ${b})`;
+		};
+
+		// mindmap branch colors: one hue per top-level branch, cycling through
+		// --color-mindmap-1..6 (see mermaid-diagram.css), tied to the site's theme
+		const branchColors: Record<string, string> = {};
+		for (let i = 0; i < 6; i++) {
+			branchColors[`cScale${i}`] = color(`--color-mindmap-${i + 1}`);
+			branchColors[`cScaleLabel${i}`] = color("--color-mindmap-label");
+		}
+
+		return {
+			background: color("--color-global-bg"),
+			primaryColor: color("--color-global-bg"),
+			primaryTextColor: color("--color-global-text"),
+			primaryBorderColor: color("--color-accent"),
+			lineColor: color("--color-muted"),
+			textColor: color("--color-global-text"),
+			// mindmap's central "root" node otherwise falls back to an inverted
+			// label color meant for colored branch backgrounds, clashing with the
+			// site's own background/text combo used for the root node
+			git0: color("--color-global-bg"),
+			gitBranchLabel0: color("--color-global-text"),
+			...branchColors,
+		};
+	}
+
+	let renderCount = 0;
+
+	async function renderAll() {
+		const canvases = document.querySelectorAll<HTMLElement>(
+			".mermaid-diagram__canvas[data-mermaid-code]",
+		);
+		if (canvases.length === 0) return;
+
+		mermaid.initialize({
+			startOnLoad: false,
+			theme: "base",
+			themeVariables: themeVariables(),
+		});
+
+		for (const canvas of canvases) {
+			const code = canvas.dataset.mermaidCode;
+			if (!code) continue;
+
+			const id = `mermaid-diagram-${renderCount++}`;
+			try {
+				const { svg, bindFunctions } = await mermaid.render(id, code);
+				canvas.innerHTML = svg;
+				bindFunctions?.(canvas);
+			} catch (error) {
+				canvas.innerHTML = `<p class="mermaid-diagram__error">Failed to render diagram.</p>`;
+				console.error(`Mermaid render failed for ${id}`, error);
+			}
+		}
+	}
+
+	renderAll();
+
+	// re-render with fresh theme variables whenever the site's light/dark toggle fires,
+	// since mermaid bakes resolved colors into the svg rather than referencing css variables.
+	// delaying the re-render until the site's own color transition finishes avoids an abrupt
+	// snap: the diagram would otherwise flip instantly while the rest of the page fades smoothly.
+	document.addEventListener("theme-change", () => {
+		const styles = getComputedStyle(document.documentElement);
+		const duration =
+			Number.parseFloat(styles.getPropertyValue("--color-mode-transition-duration")) || 300;
+		setTimeout(renderAll, duration);
+	});
+
+	window.addEventListener("pageshow", (event) => {
+		if (event.persisted) renderAll();
+	});
+
+	// --- maximize + pan/zoom overlay, shared across every diagram on the page ---
+
+	const MIN_SCALE = 0.5;
+	const MAX_SCALE = 6;
+
+	let overlay: HTMLDivElement | null = null;
+	let stage: HTMLDivElement | null = null;
+	let originCanvas: HTMLElement | null = null;
+	let originButton: HTMLElement | null = null;
+	let scale = 1;
+	let translateX = 0;
+	let translateY = 0;
+
+	function applyTransform() {
+		if (stage)
+			stage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+	}
+
+	function zoomAt(clientX: number, clientY: number, factor: number) {
+		if (!overlay) return;
+		const rect = overlay.getBoundingClientRect();
+		const originX = rect.left + rect.width / 2;
+		const originY = rect.top + rect.height / 2;
+		const localX = (clientX - originX - translateX) / scale;
+		const localY = (clientY - originY - translateY) / scale;
+		scale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale * factor));
+		translateX = clientX - originX - localX * scale;
+		translateY = clientY - originY - localY * scale;
+		applyTransform();
+	}
+
+	function createOverlay() {
+		const el = document.createElement("div");
+		el.className = "mermaid-zoom-overlay";
+		el.setAttribute("role", "dialog");
+		el.setAttribute("aria-modal", "true");
+		el.setAttribute("aria-label", "Diagram, zoomed in");
+		el.hidden = true;
+		el.innerHTML = `
+			<button type="button" class="mermaid-zoom-overlay__close" aria-label="Close">
+				<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+					<path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+				</svg>
+			</button>
+			<div class="mermaid-zoom-overlay__viewport">
+				<div class="mermaid-zoom-overlay__stage"></div>
+			</div>
+		`;
+		document.body.append(el);
+
+		const viewport = el.querySelector<HTMLDivElement>(".mermaid-zoom-overlay__viewport")!;
+		stage = el.querySelector<HTMLDivElement>(".mermaid-zoom-overlay__stage")!;
+		const closeBtn = el.querySelector<HTMLButtonElement>(".mermaid-zoom-overlay__close")!;
+
+		closeBtn.addEventListener("click", closeOverlay);
+		viewport.addEventListener(
+			"wheel",
+			(event) => {
+				event.preventDefault();
+				const factor = event.deltaY < 0 ? 1.15 : 1 / 1.15;
+				zoomAt(event.clientX, event.clientY, factor);
+			},
+			{ passive: false },
+		);
+
+		// dragging pans the diagram; a plain click/tap that isn't a drag and
+		// doesn't land on the diagram itself closes the overlay, so panning
+		// and click-outside-to-close can share the same full-size viewport
+		// without fighting over the same pointer events
+		const DRAG_THRESHOLD = 5;
+		let dragging = false;
+		let pointerDownX = 0;
+		let pointerDownY = 0;
+		let startTarget: EventTarget | null = null;
+
+		viewport.addEventListener("pointerdown", (event) => {
+			event.preventDefault();
+			dragging = true;
+			pointerDownX = event.clientX;
+			pointerDownY = event.clientY;
+			startTarget = event.target;
+			viewport.setPointerCapture(event.pointerId);
+		});
+		viewport.addEventListener("pointermove", (event) => {
+			if (!dragging) return;
+			translateX += event.clientX - pointerDownX;
+			translateY += event.clientY - pointerDownY;
+			pointerDownX = event.clientX;
+			pointerDownY = event.clientY;
+			applyTransform();
+		});
+		viewport.addEventListener("pointerup", (event) => {
+			dragging = false;
+			const movedX = Math.abs(event.clientX - pointerDownX);
+			const movedY = Math.abs(event.clientY - pointerDownY);
+			if (movedX > DRAG_THRESHOLD || movedY > DRAG_THRESHOLD) return;
+
+			const clickedInsideSvg = (startTarget as HTMLElement | null)?.closest("svg");
+			if (!clickedInsideSvg) closeOverlay();
+		});
+		viewport.addEventListener("dblclick", () => {
+			scale = 1;
+			translateX = 0;
+			translateY = 0;
+			applyTransform();
+		});
+
+		return el;
+	}
+
+	function openOverlay(canvas: HTMLElement, button: HTMLElement) {
+		const svg = canvas.querySelector("svg");
+		if (!svg) return;
+
+		overlay ??= createOverlay();
+		originCanvas = canvas;
+		originButton = button;
+		scale = 1;
+		translateX = 0;
+		translateY = 0;
+		stage!.append(svg);
+		applyTransform();
+
+		overlay.hidden = false;
+		document.documentElement.style.overflow = "hidden";
+		overlay.querySelector<HTMLButtonElement>(".mermaid-zoom-overlay__close")?.focus();
+	}
+
+	function closeOverlay() {
+		if (!overlay || overlay.hidden) return;
+		const svg = stage?.querySelector("svg");
+		if (svg && originCanvas) originCanvas.append(svg);
+
+		overlay.hidden = true;
+		document.documentElement.style.overflow = "";
+		originButton?.focus();
+		originCanvas = null;
+		originButton = null;
+	}
+
+	document.addEventListener("click", (event) => {
+		const button = (event.target as HTMLElement).closest<HTMLElement>(".mermaid-diagram__zoom-btn");
+		if (!button) return;
+		const canvas = button.previousElementSibling as HTMLElement | null;
+		if (canvas) openOverlay(canvas, button);
+	});
+
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") closeOverlay();
+	});
+</script>

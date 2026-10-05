@@ -1,0 +1,88 @@
+/*
+ * Per-branch mindmap colors, one hue per top-level branch, cycling through
+ * Everforest's accent palette. Labels use the site's own background color
+ * for contrast against the saturated branch fills, tying the diagram to the
+ * site's light/dark theme rather than mermaid's generic defaults.
+ */
+:root {
+	--color-mindmap-label: #f3ead3;
+	--color-mindmap-1: #8da101; /* green */
+	--color-mindmap-2: #3a94c5; /* blue */
+	--color-mindmap-3: #df69ba; /* purple */
+	--color-mindmap-4: #f57d26; /* orange */
+	--color-mindmap-5: #dfa000; /* yellow */
+	--color-mindmap-6: #f85552; /* red */
+}
+
+html[data-theme="dark"] {
+	--color-mindmap-label: #1e2326;
+	--color-mindmap-1: #a7c080; /* green */
+	--color-mindmap-2: #7fbbb3; /* blue */
+	--color-mindmap-3: #d699b6; /* purple */
+	--color-mindmap-4: #e69875; /* orange */
+	--color-mindmap-5: #dbbc7f; /* yellow */
+	--color-mindmap-6: #e67e80; /* red */
+}
+
+.mermaid-diagram,
+.mermaid-zoom-overlay {
+	.section-root .nodeLabel {
+		@apply font-bold;
+	}
+}
+
+.mermaid-diagram {
+	@apply relative my-6 overflow-x-auto rounded-md border border-black/10 p-4 dark:border-white/10;
+
+	> .mermaid-diagram__canvas > svg {
+		@apply mx-auto block h-auto max-w-full;
+	}
+
+	&:hover > .mermaid-diagram__zoom-btn,
+	> .mermaid-diagram__zoom-btn:focus-visible {
+		@apply opacity-100;
+	}
+}
+
+.mermaid-diagram__placeholder,
+.mermaid-diagram__error {
+	@apply text-muted text-sm italic;
+}
+
+.mermaid-diagram__zoom-btn {
+	@apply text-global-text absolute end-2 top-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md bg-black/5 opacity-0 transition-opacity hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20;
+
+	> svg {
+		@apply h-5 w-5;
+	}
+}
+
+.mermaid-zoom-overlay {
+	@apply fixed inset-0 z-100 flex items-center justify-center bg-black/85;
+
+	&[hidden] {
+		display: none;
+	}
+}
+
+.mermaid-zoom-overlay__viewport {
+	@apply h-full w-full cursor-grab touch-none overflow-hidden select-none;
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+.mermaid-zoom-overlay__stage {
+	@apply flex h-full w-full items-center justify-center;
+	transform-origin: center center;
+	will-change: transform;
+
+	> svg {
+		@apply max-w-none;
+	}
+}
+
+.mermaid-zoom-overlay__close {
+	@apply absolute end-4 top-4 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20;
+}
