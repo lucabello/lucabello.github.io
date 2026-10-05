@@ -1,0 +1,54 @@
+---
+import PageLayout from "./Base.astro";
+
+const { frontmatter, headings = [] } = Astro.props;
+
+interface Item {
+	children: { slug: string; text: string }[];
+	slug: string;
+	text: string;
+}
+
+const clean = (text: string) => text.replace(/^⋄\s*/, "");
+const items: Item[] = [];
+for (const heading of headings as { depth: number; slug: string; text: string }[]) {
+	if (heading.depth === 2) items.push({ children: [], slug: heading.slug, text: clean(heading.text) });
+	else if (heading.depth === 3 && items.length) {
+		items.at(-1)?.children.push({ slug: heading.slug, text: clean(heading.text) });
+	}
+}
+---
+
+<PageLayout meta={{ description: frontmatter.description, title: frontmatter.title }}>
+	<h1 class="title mb-12">{frontmatter.title}</h1>
+	<div class="relative">
+		{items.length > 1 && (
+			<aside class="mb-10 xl:absolute xl:inset-y-0 xl:-start-60 xl:mb-0 xl:w-56 2xl:-start-72 2xl:w-64">
+				<details open class="xl:sticky xl:top-12">
+					<summary class="title hover:marker:text-accent cursor-pointer text-lg xl:hidden">Contents</summary>
+					<nav class="mt-4 xl:mt-0" aria-label="Table of contents">
+						<ol class="space-y-3 text-sm">
+							{items.map((item) => (
+								<li>
+									<a class="hover:text-accent font-semibold" href={`#${item.slug}`}>{item.text}</a>
+									{item.children.length > 0 && (
+										<ol class="text-muted mt-1 space-y-1 border-s ps-3 text-xs">
+											{item.children.map((child) => (
+												<li>
+													<a class="hover:text-accent" href={`#${child.slug}`}>{child.text}</a>
+												</li>
+											))}
+										</ol>
+									)}
+								</li>
+							))}
+						</ol>
+					</nav>
+				</details>
+			</aside>
+		)}
+		<div class="prose prose-sm prose-cactus max-w-none">
+			<slot />
+		</div>
+	</div>
+</PageLayout>

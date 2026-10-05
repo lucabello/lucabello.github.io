@@ -1,9 +1,8 @@
 ---
 title: Light or Dark mode? An analytical approach
 description: Does it come down to personal preference, or is there a "correct" choice?
-date: 2024-03-12
-creationDate: 2024-03-06
-featured: false
+publishDate: 2024-03-12
+pinned: false
 draft: false
 tags:
   - analysis
@@ -84,4 +83,4 @@ If you have thoughts you want to share (or just want to tell me that I'm dumb fo
 
 [^3]: Dobres, Jonathan & Chahine, Nadine & Reimer, Bryan. (2017). Effects of ambient illumination, contrast polarity, and letter size on text legibility under glance-like reading. Applied Ergonomics. 60. 68-73. 10.1016/j.apergo.2016.11.001. https://doi.org/10.1016/j.apergo.2016.11.001
 
-[^4]: Aleman, A., Wang, M. & Schaeffel, F. Reading and Myopia: Contrast Polarity Matters. *Sci Rep* **8**, 10840 (2018). https://doi.org/10.1038/s41598-018-28904-x
+[^4]: Aleman, A., Wang, M. & Schaeffel, F. Reading and Myopia: Contrast Polarity Matters. _Sci Rep_ **8**, 10840 (2018). https://doi.org/10.1038/s41598-018-28904-x
