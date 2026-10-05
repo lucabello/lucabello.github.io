@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { menuLinks, siteConfig } from "@/site.config";
 import "@fontsource/ubuntu/300.css";
 import "@fontsource/ubuntu/400.css";
 import "@fontsource/ubuntu/500.css";
@@ -30,18 +31,28 @@ const facts = [
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<meta content="noindex" name="robots" />
-		<title>Luca Bello — Resume</title>
+		<title>Resume • {siteConfig.title}</title>
 		<meta
-			content="Luca Bello — Software Engineer, Observability. One-page resume."
+			content="Luca Bello - Software Engineer, Observability. One-page resume."
 			name="description"
 		/>
 	</head>
 	<body>
 		<div class="actions no-print">
-			<button id="print" type="button">
-				Save as PDF
-			</button>
-			<a href="/cv/">Long-form CV</a>
+			<div class="brand">
+				<a class="brand-link" href="/">
+					<img alt="" aria-hidden="true" class="brand-logo" src="/logo.png" />
+					<span class="brand-title">{siteConfig.title}</span>
+				</a>
+				<nav aria-label="Main" class="brand-nav">
+					{menuLinks.map((link) => (
+						<a aria-current={Astro.url.pathname === link.path ? "page" : false} href={link.path}>
+							{link.title}
+						</a>
+					))}
+				</nav>
+			</div>
+			<button id="print" type="button">Save as PDF</button>
 		</div>
 
 		<main class="sheet">
@@ -512,25 +523,68 @@ const facts = [
 		align-items: center;
 		display: flex;
 		gap: 1rem;
-		justify-content: center;
-		padding-top: 1.5rem;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 210mm;
+		padding: 1.5rem 0 0;
 	}
 
-	.actions button,
-	.actions a {
+	.brand {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+	}
+
+	.brand-link {
+		align-items: center;
+		display: inline-flex;
+		gap: 0.6rem;
+		text-decoration: none;
+	}
+
+	.brand-logo {
+		filter: grayscale(1);
+		height: 2.25rem;
+		width: 2.25rem;
+	}
+
+	.brand-link:hover .brand-logo {
+		filter: none;
+	}
+
+	.brand-title {
+		color: var(--accent);
+		font-size: 13pt;
+		font-weight: 700;
+	}
+
+	.brand-nav {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.brand-nav a {
+		font-size: 10pt;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.brand-nav a:hover,
+	.brand-nav a[aria-current="page"] {
+		text-decoration: underline;
+	}
+
+	.actions button {
 		background: var(--accent);
 		border: 0;
 		border-radius: 4px;
 		color: #fff;
 		cursor: pointer;
+		flex-shrink: 0;
 		font: inherit;
 		font-size: 10pt;
 		padding: 0.4rem 0.9rem;
-	}
-
-	.actions a {
-		background: transparent;
-		color: var(--accent);
 	}
 
 	/* --- print --- */
