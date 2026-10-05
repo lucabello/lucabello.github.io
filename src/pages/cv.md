@@ -33,13 +33,13 @@ Technical lead of Canonical's [Observability team](https://documentation.ubuntu.
 
 <small>📅 2024-2026 | 📍 (remote), 🇩🇪 Germany </small>
 
-Part of the [Observability team at Canonical](https://documentation.ubuntu.com/observability/track-3.0/), taking on leadership roles involving mentoring junior colleagues and taking ownership over both technical components and stakeholders interactions on behalf of the team.
+Stepped into a leadership role within the same team, mentoring junior colleagues and taking ownership of both technical components and stakeholder interactions on behalf of the team.
 
 **Main accomplishments**:
 
 - **Ownership and team alignment**: took projects from idea to delivery, from technical efforts such as the [load testing](/posts/my-journey-into-load-testing-learning-k6/) story to cross-team coordination, while moderating all of the team's meetings (planning, retrospectives, syncs) and keeping the team focused through periodic "roadmap state" reviews.
 - **Delivery excellence**: consistently delivered more than 50% of our 5-people team's total work, averaging 250% more "planned days of work" being completed per sprint compared to other people on the team.
-- **Security posture**: directed the team discourse on security and SSDLC processes, performing preventive CVE scanning and spear-heading the company guidelines on vulnerability response.
+- **Security posture**: directed the team discourse on security and SSDLC processes, performing preventive CVE scanning and spearheading the company guidelines on vulnerability response.
 
 
 ### ⋄ Software Engineer @ Canonical
@@ -51,7 +51,7 @@ Part of the [Observability team at Canonical](https://documentation.ubuntu.com/o
 **Main accomplishments**:
 - **Secure software supply chain**: led the packaging of upstream Observability software as [rocks](https://ubuntu.com/containers/rockcraft), delivering minimal, reproducible and regularly patched container images for the whole stack.
 - [**CI/CD infrastructure**](https://github.com/canonical/observability): single-handedly designed and implemented department-wide automations, setting new [standards of quality](https://discourse.charmhub.io/t/16697) for our software and engineering processes.
-- [**Testing architecture**](<>): re-designed our testing approach with _feature-first semantics_ and parallelization, increasing the speed of our testing suites by 225%.
+- **Testing architecture**: re-designed our testing approach with _feature-first semantics_ and parallelization, increasing the speed of our testing suites by 225%.
 
 <small><b>Programming Languages</b>: Python, Go, Bash</small><br/>
 <small><b>Relevant Software</b>: Prometheus, Grafana, Loki, Mimir, Alertmanager, Grafana Agent, Opentelemetry Collector, Blackbox Exporter, Prometheus Pushgateway</small><br/>
@@ -80,15 +80,17 @@ Part of the [CERN IT Monitoring team](https://monit.web.cern.ch/), operating bot
 
 <small>📅 2018-2020 | 📍 Torino, 🇮🇹 Italy + Göteborg, 🇸🇪 Sweden</small>
 
-**Politecnico di Torino**, with Erasmus at **Chalmers University**. Final Mark: 110/110 with honors.
+**Politecnico di Torino**, with Erasmus at **Chalmers University**.
+
+Final Mark: 110/110 with honors.
 
 📚 [Master Thesis](https://odr.chalmers.se/items/458f154c-0947-4d67-a1b1-e6218bd34a79)
 
 ### ⋄ BSc in Computer Engineering @ PoliTo
 
-<small>📅 2015-2018 📍 Torino, 🇮🇹 Italy</small>
+<small>📅 2015-2018 | 📍 Torino, 🇮🇹 Italy</small>
 
-Attended the excellence program **"Young Talents"**, which collects the top tier talents of the university.
+Attended the excellence program [**"Young Talents"**](https://www.polito.it/en/education/polito-learning-experiences/learning-experiences-in-interdisciplinarity/percorso-intraprendenti), which collects the top tier talents of the university.
 
 Final Mark: 110/110 with honors.
 
@@ -106,11 +108,11 @@ Final Mark: 110/110 with honors.
 
 ### ⋄ CyberChallenge.IT @ CINI
 
-<small>📅 2018 | 🏛️ Italian Cybersecurity Nationl Lab</small>
+<small>📅 2018 | 🏛️ Italian Cybersecurity National Lab</small>
 
 Training program in cybersecurity, vulnerabilities and ethical hacking. I was chosen to represent Politecnico di Torino in a national cybersecurity competition (Attack-Defense CTF) in Rome.
 
-### ⋄ Entrepeneurship @ EIA
+### ⋄ Entrepreneurship @ EIA
 
 <small>📅 2017 | 🏛️ European Innovation Academy</small>
 
@@ -122,19 +124,19 @@ Startup accelerator with participants from 70+ countries and over 100 startups f
 
 ### ⋄ lucabello/grimoire
 
-<small>📅 2026 - now | 🔗 [lucabello/grimoire](https://github.com/lucabello/grimoire)</small>
+<small>📅 2026-now | 🔗 [lucabello/grimoire](https://github.com/lucabello/grimoire)</small>
 
 Self-hostable GitHub repository monitoring dashboard: tracks CI health and stale PRs/issues, and runs automated checks and actions across your repositories.
 
 ### ⋄ lucabello/juju-lens
 
-<small>📅 2026 - now | 🔗 [lucabello/juju-lens](https://github.com/lucabello/juju-lens)</small>
+<small>📅 2026-now | 🔗 [lucabello/juju-lens](https://github.com/lucabello/juju-lens)</small>
 
 Time-traveling debugger for Juju: records and replays model events.
 
 ### ⋄ casey/just snap
 
-<small>📅 2024 - now | 🔗 [snapcraft.io/just](https://snapcraft.io/just)</small>
+<small>📅 2024-now | 🔗 [snapcraft.io/just](https://snapcraft.io/just)</small>
 
 Unofficial snap package for [`casey/just`](https://github.com/casey/just).
 
@@ -145,13 +147,13 @@ Unofficial snap package for [`casey/just`](https://github.com/casey/just).
 
 ### ⋄ Kangaroo Docs
 
-<small>📅 Mar 2019 - Sep 2019 | 🔗 [lucabello/kangaroo-docs](https://github.com/lucabello/kangaroo-docs)</small>
+<small>📅 2019 | 🔗 [lucabello/kangaroo-docs](https://github.com/lucabello/kangaroo-docs)</small>
 
 Collaborative rich text editor with support for account creation and file storage.
 
 ### ⋄ Lucy
 
-<small>📅 Mar 2018 - Sep 2018 | 🔗 [Website](https://ami-2018.github.io/Lucy/)</small>
+<small>📅 2018 | 🔗 [Website](https://ami-2018.github.io/Lucy/)</small>
 
 Smart walk-in closet in the context of an Ambient Intelligence system.
 
