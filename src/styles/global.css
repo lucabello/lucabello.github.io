@@ -131,7 +131,6 @@
 @layer components {
 	@import "./components/admonition.css";
 	@import "./components/github-card.css";
-	@import "./components/d2-diagram.css";
 	@import "./components/mermaid-diagram.css";
 
 	.cactus-link {

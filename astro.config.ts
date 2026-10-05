@@ -9,7 +9,6 @@ import icon from "astro-icon";
 import robotsTxt from "astro-robots-txt";
 import webmanifest from "astro-webmanifest";
 import { satteriAdmonitionsPlugin } from "./src/plugins/admonitions";
-import { satteriD2Plugin } from "./src/plugins/d2";
 import { satteriGithubCardPlugin } from "./src/plugins/github-cards";
 import {
 	satteriAutolinkHeadingsPlugin,
@@ -80,7 +79,6 @@ export default defineConfig({
 				satteriAutolinkHeadingsPlugin(),
 				satteriFootnoteLabelPlugin(),
 				satteriExternalLinksPlugin(),
-				satteriD2Plugin(),
 			],
 		}),
 	},

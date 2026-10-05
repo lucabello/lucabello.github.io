@@ -57,9 +57,7 @@ clean:
 # Maintenance
 # ============================================================================
 
-# Install project dependencies (uses corepack-pinned npm) and the `d2` CLI
-# (used at build time to render ```d2 diagram code blocks to SVG; see src/plugins/d2.ts).
+# Install project dependencies (uses corepack-pinned npm).
 [group("maintenance")]
 install:
     npm ci
-    command -v d2 >/dev/null || curl -fsSL https://d2lang.com/install.sh | sh -s -- --prefix "$HOME/.local"
