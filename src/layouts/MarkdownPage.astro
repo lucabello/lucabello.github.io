@@ -20,7 +20,7 @@ for (const heading of headings as { depth: number; slug: string; text: string }[
 ---
 
 <PageLayout meta={{ description: frontmatter.description, title: frontmatter.title }}>
-	<h1 class="title mb-12">{frontmatter.title}</h1>
+	{!frontmatter.hideTitle && <h1 class="title mb-12">{frontmatter.title}</h1>}
 	<div class="relative">
 		{items.length > 1 && (
 			<aside class="mb-10 xl:absolute xl:inset-y-0 xl:-start-60 xl:mb-0 xl:w-56 2xl:-start-72 2xl:w-64">

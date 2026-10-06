@@ -2,6 +2,7 @@
 layout: ../layouts/MarkdownPage.astro
 title: Curriculum Vitae
 description: "Luca Bello - Curriculum Vitae"
+hideTitle: true
 ---
 
 # Luca Bello

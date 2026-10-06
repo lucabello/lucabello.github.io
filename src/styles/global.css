@@ -153,3 +153,15 @@
 	--tw-prose-quotes: var(--color-quote);
 	--tw-prose-th-borders: #666;
 }
+
+.prose :not(pre) > code {
+	background-color: color-mix(in srgb, var(--color-global-text) 12%, transparent);
+	border-radius: 0.25rem;
+	padding: 0.15rem 0.4rem;
+	font-size: 0.875em;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+	content: none;
+}
